@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/Camyul/FrontEndFinalProject#readme",
   "dependencies": {
+    "@types/express": "^4.0.37",
     "bootstrap": "^3.3.7",
+    "express": "^4.15.5",
     "handlebars": "^4.0.10",
     "jquery": "^3.2.1",
     "navigo": "^5.3.1",
