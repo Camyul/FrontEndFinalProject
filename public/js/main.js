@@ -1,11 +1,4 @@
-let div = document.createElement('div');
-let inputButton = document.createElement('button');
+import { router } from './routing';
 
-div.innerHTML = 'Final Project';
-inputButton.className += ' btn btn-success';
-inputButton.innerText = 'Test';
 
-const $container = $('#app-container');
-
-$container.append(div);
-$container.append(inputButton);
+router.init();

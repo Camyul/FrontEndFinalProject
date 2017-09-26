@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 200px;
+    background-image: -ms-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
+    background-image: -moz-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
+    background-image: -o-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
+    background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 359, color-stop(0, #7E4834), color-stop(100, #471414));
+    background-image: -webkit-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
+    background-image: radial-gradient(ellipse farthest-corner at center bottom, #7E4834 0%, #471414 100%);
+}
+
+nav {
+    background-color: rgb(147, 140, 123);
+    width: 85%;
+    padding-right: 15%;
+}
