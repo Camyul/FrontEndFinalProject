@@ -6,7 +6,8 @@ SystemJS.config({
         'plugin-babel': 'libs/systemjs-plugin-babel/plugin-babel.js',
         'systemjs-babel-build': 'libs/systemjs-plugin-babel/systemjs-babel-browser.js',
         // app start script
-        'main': './js/main.js'
+        'main': './js/main.js',
+        'template-loader': './js/templates-loader.js'
     },
     packages: {
         '/': {
