@@ -8,6 +8,8 @@ SystemJS.config({
         // app start script
         'main': './js/main.js',
         'template-loader': './js/templates-loader.js',
+        'loginController': './js/controllers/loginController.js',
+        'logoutController': './js/controllers/logoutController.js'
     },
     packages: {
         '/': {

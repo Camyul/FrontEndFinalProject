@@ -18,8 +18,8 @@ header {
     padding-right: 15%;
 }
 
-.container {
-    padding-right: 15%;
+.logo {
+    padding-top: 8px;
 }
 
 nav {
@@ -30,6 +30,7 @@ nav {
 
 .nav li a {
     color: white;
+    text-transform: uppercase;
 }
 
 .nav li a:hover {

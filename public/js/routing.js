@@ -1,5 +1,8 @@
 // import { data } from './data.js';
+import { loginController } from 'loginController';
+import { logoutController } from 'logoutController';
 import { templateLoader as tl } from 'template-loader';
+
 
 var router = (() => {
     let navigo;
@@ -17,7 +20,10 @@ var router = (() => {
                     });
             })
             .on('login', () => {
-                console.log('Router in Login');
+                loginController
+            })
+            .on('logout', () => {
+                logoutController
             })
             .on('profile', () => {
                 console.log('Router in profile');
