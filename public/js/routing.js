@@ -1,23 +1,24 @@
-// import { data } from './data.js';
 import { loginController } from 'loginController';
 import { logoutController } from 'logoutController';
-import { templateLoader as tl } from 'template-loader';
+import { homeController } from 'homeController';
 
 
 var router = (() => {
     let navigo;
-    const $container = $('#app-container');
 
     function init() {
         navigo = new Navigo(null, false);
 
-        navigo.on('/', (params) => {
-                Promise.all([tl.get('home')])
-                    .then(([template]) => {
-                        const html = template(); // TODO: Here Add data
-                        $container.html(html);
-                        console.log('Router in home');
-                    });
+        navigo.on('/', () => {
+                homeController
+            })
+            .on('menu/:id', (params) => {
+                // menuController
+                console.log(`menu ${JSON.stringify(params)}`);
+            })
+            .on('menu', () => {
+                // menuController
+                console.log('menu');
             })
             .on('login', () => {
                 loginController

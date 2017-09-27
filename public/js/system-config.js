@@ -9,7 +9,9 @@ SystemJS.config({
         'main': './js/main.js',
         'template-loader': './js/templates-loader.js',
         'loginController': './js/controllers/loginController.js',
-        'logoutController': './js/controllers/logoutController.js'
+        'logoutController': './js/controllers/logoutController.js',
+        'homeController': './js/controllers/homeController.js',
+        'dataService': './data/dataService.js',
     },
     packages: {
         '/': {
