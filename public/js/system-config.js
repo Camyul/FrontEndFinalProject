@@ -7,11 +7,12 @@ SystemJS.config({
         'systemjs-babel-build': 'libs/systemjs-plugin-babel/systemjs-babel-browser.js',
         // app start script
         'main': './js/main.js',
-        'template-loader': './js/templates-loader.js'
+        'template-loader': './js/templates-loader.js',
     },
     packages: {
         '/': {
-            defaultExtension: 'js' // remove '.js' from imports
-        }
-    }
+            // remove '.js' from imports
+            defaultExtension: 'js',
+        },
+    },
 });

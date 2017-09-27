@@ -1,12 +1,12 @@
-var express = require('express');
+const express = require('express');
 
-var app = express();
+const app = express();
 
 app.use(express.static('public'));
 app.use('/libs', express.static('node_modules'));
 
-var port = process.env.PORT || 3013;
+const port = process.env.port || 3013;
 
-app.listen(port, function() {
+app.listen(port, () => {
     console.log('Server is running at http://localhost:' + port);
 });

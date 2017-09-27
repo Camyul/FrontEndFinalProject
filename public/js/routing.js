@@ -1,9 +1,9 @@
 // import { data } from './data.js';
-import { templateLoader as tl } from 'template-loader'
+import { templateLoader as tl } from 'template-loader';
 
 var router = (() => {
     let navigo;
-    let $container = $('#app-container');
+    const $container = $('#app-container');
 
     function init() {
         navigo = new Navigo(null, false);
@@ -11,19 +11,23 @@ var router = (() => {
         navigo.on('/', (params) => {
                 Promise.all([tl.get('home')])
                     .then(([template]) => {
-                        const html = template();
+                        const html = template(); // TODO: Here Add data
                         $container.html(html);
-                    }) // Here Add data
+                        console.log('Router in home');
+                    });
             })
-            .on('login', () => { console.log('Login') })
-            // .on('', () => {})
+            .on('login', () => {
+                console.log('Router in Login');
+            })
+            .on('profile', () => {
+                console.log('Router in profile');
+            })
             .resolve();
     }
 
     return {
-        init
-    }
-
+        init,
+    };
 })();
 
 export { router };
