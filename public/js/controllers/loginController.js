@@ -10,11 +10,6 @@ const loginController = (() => $('#login').click(() => {
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        // console.log(user);
-        $('#login').addClass('hide');
-        $('#logout').removeClass('hide');
-        $('#profile').removeClass('hide');
-        $('#profile').text(user.displayName.split(' ')[0]);
 
         document.location = '#/profile';
 

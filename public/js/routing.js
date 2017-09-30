@@ -9,7 +9,7 @@ var router = (() => {
     function init() {
         navigo = new Navigo(null, false);
 
-        navigo.on('/', () => {
+        navigo.on('home', () => {
                 homeController
             })
             .on('menu/:id', (params) => {
@@ -20,6 +20,14 @@ var router = (() => {
                 // menuController
                 console.log('menu');
             })
+            .on('contact', () => {
+                // menuController
+                console.log('contact');
+            })
+            .on('location', () => {
+                // menuController
+                console.log('location');
+            })
             .on('login', () => {
                 loginController
             })
@@ -29,7 +37,11 @@ var router = (() => {
             .on('profile', () => {
                 console.log('Router in profile');
             })
-            .resolve();
+            .on('/', () => {
+                document.location = '#/home';
+            })
+
+        .resolve();
     }
 
     return {
