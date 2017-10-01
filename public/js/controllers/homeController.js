@@ -9,11 +9,12 @@ class HomeController {
             .then(([template, data]) => {
                 const $container = $('#app-container');
                 // console.log('home controller');
-                console.log(data); // TODO: да сменя getMenu() с постове
+                console.log(data);
+                //:TODO да сменя getMenu() с постове
                 const html = template(data);
                 $container.html(html);
             })
-    };
+    }
 
 }
 

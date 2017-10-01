@@ -13,7 +13,7 @@ class ProfileController {
                 const html = template(data);
                 $container.html(html);
             })
-    };
+    }
 
 }
 

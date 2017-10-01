@@ -5,7 +5,8 @@ const templateLoader = (() => {
     function get(templateName) {
         return new Promise((resolve, reject) => {
             if (cache[templateName]) {
-                resolve(cache[templateName]); //Кешираме да не прави нова заявка
+                resolve(cache[templateName]);
+                // Кешираме да не прави нова заявка
             } else {
                 $.get(`/js/templates/${templateName}.handlebars`)
                     .done((data) => {

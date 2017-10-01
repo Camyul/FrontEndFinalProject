@@ -13,7 +13,7 @@ class LocationController {
                 const html = template(data);
                 $container.html(html);
             })
-    };
+    }
 
 }
 

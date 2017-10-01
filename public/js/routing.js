@@ -1,16 +1,16 @@
+import { ContactController } from 'contactController';
+import { HomeController } from 'homeController';
+import { LocationController } from 'locationController';
+import { MenuController } from 'menuController';
+import { ProfileController } from 'profileController';
+import { dataService } from 'dataService';
 import { loginController } from 'loginController';
 import { logoutController } from 'logoutController';
-import { HomeController } from 'homeController';
-import { MenuController } from 'menuController';
-import { ContactController } from 'contactController';
-import { LocationController } from 'locationController';
-import { ProfileController } from 'profileController'
 
 import { templateLoader } from 'template-loader';
-import { dataService } from 'dataService';
 
 
-var router = (() => {
+const router = (() => {
     let navigo;
 
     function init() {
@@ -25,27 +25,34 @@ var router = (() => {
 
                 // console.log('menu router');
                 // console.log(`menu ${JSON.stringify(params)}`);
-            }).on('menu', () => {
+            })
+            .on('menu', () => {
                 const menuController = new MenuController(dataService, templateLoader);
                 menuController.getMenu();
                 // console.log('menu router');
-            }).on('contact', () => {
+            })
+            .on('contact', () => {
                 const contactController = new ContactController(dataService, templateLoader);
                 contactController.getContacts();
                 // console.log('contact router');
-            }).on('location', () => {
+            })
+            .on('location', () => {
                 const locationController = new LocationController(dataService, templateLoader);
                 locationController.getLocation();
                 // console.log('location router');
-            }).on('login', () => {
+            })
+            .on('login', () => {
                 loginController
-            }).on('logout', () => {
+            })
+            .on('logout', () => {
                 logoutController
-            }).on('profile', () => {
+            })
+            .on('profile', () => {
                 const profileController = new ProfileController(dataService, templateLoader);
                 profileController.getProfile();
                 // console.log('profile router');
-            }).on('/', () => {
+            })
+            .on('/', () => {
                 document.location = '#/home';
             })
             .resolve();

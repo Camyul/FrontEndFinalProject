@@ -13,8 +13,7 @@ class ContactController {
                 const html = template(data);
                 $container.html(html);
             })
-    };
-
+    }
 }
 
 export { ContactController };
