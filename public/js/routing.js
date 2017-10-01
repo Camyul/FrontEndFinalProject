@@ -45,7 +45,8 @@ const router = (() => {
                 loginController
             })
             .on('logout', () => {
-                logoutController
+                logoutController,
+                document.location = '#/home';
             })
             .on('profile', () => {
                 const profileController = new ProfileController(dataService, templateLoader);

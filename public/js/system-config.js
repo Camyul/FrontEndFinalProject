@@ -16,6 +16,7 @@ SystemJS.config({
         'contactController': './js/controllers/contactController.js',
         'locationController': './js/controllers/locationController.js',
         'profileController': './js/controllers/profileController.js',
+        'router': './js/routing.js',
     },
     packages: {
         '/': {

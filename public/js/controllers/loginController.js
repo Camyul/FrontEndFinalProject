@@ -1,3 +1,5 @@
+import { router } from 'router';
+
 const loginController = (() => $('#login').click(() => {
     const provider = new firebase.auth.FacebookAuthProvider();
 
@@ -13,6 +15,7 @@ const loginController = (() => $('#login').click(() => {
             const user = result.user;
 
             document.location = '#/profile';
+            router.init();
 
         })
         .catch((error) => {
