@@ -14,9 +14,22 @@ header {
 }
 
 #app-container {
+    display: flex;
     padding-left: 15%;
     padding-right: 15%;
     background-color: #efedd4;
+}
+
+#location-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 400px;
 }
 
 footer {
@@ -64,7 +77,8 @@ footer div li a {
 }
 
 #map {
-    width: 100%;
+    display: flex;
+    width: 70%;
     height: 400px;
     background-color: grey;
 }
