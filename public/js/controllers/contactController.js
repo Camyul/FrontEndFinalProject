@@ -1,15 +1,15 @@
-class HomeController {
+class ContactController {
     constructor(dataService, templateLoader) {
         this.dataService = dataService;
         this.templateLoader = templateLoader;
     }
 
-    home() {
-        Promise.all([this.templateLoader.get('home'), this.dataService.getMenu()])
+    getContacts() {
+        Promise.all([this.templateLoader.get('contact'), this.dataService.getMenu()])
             .then(([template, data]) => {
                 const $container = $('#app-container');
-                // console.log('home controller');
-                console.log(data); // TODO: да сменя getMenu() с постове
+                // console.log('contact controller');
+                // console.log(data); // TODO: да сменя getMenu() or remove dataService
                 const html = template(data);
                 $container.html(html);
             })
@@ -17,4 +17,4 @@ class HomeController {
 
 }
 
-export { HomeController };
+export { ContactController };

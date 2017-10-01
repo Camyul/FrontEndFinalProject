@@ -12,6 +12,10 @@ SystemJS.config({
         'logoutController': './js/controllers/logoutController.js',
         'homeController': './js/controllers/homeController.js',
         'dataService': './data/dataService.js',
+        'menuController': './js/controllers/menuController.js',
+        'contactController': './js/controllers/contactController.js',
+        'locationController': './js/controllers/locationController.js',
+        'profileController': './js/controllers/profileController.js',
     },
     packages: {
         '/': {

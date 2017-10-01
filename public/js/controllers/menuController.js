@@ -1,15 +1,15 @@
-class HomeController {
+class MenuController {
     constructor(dataService, templateLoader) {
         this.dataService = dataService;
         this.templateLoader = templateLoader;
     }
 
-    home() {
-        Promise.all([this.templateLoader.get('home'), this.dataService.getMenu()])
+    getMenu() {
+        Promise.all([this.templateLoader.get('menu'), this.dataService.getMenu()])
             .then(([template, data]) => {
                 const $container = $('#app-container');
-                // console.log('home controller');
-                console.log(data); // TODO: да сменя getMenu() с постове
+                // console.log('menu controller');
+                // console.log(data); // TODO: create getMenuItemById()
                 const html = template(data);
                 $container.html(html);
             })
@@ -17,4 +17,4 @@ class HomeController {
 
 }
 
-export { HomeController };
+export { MenuController };
