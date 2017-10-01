@@ -10,6 +10,7 @@ class ContactController {
                 const $container = $('#app-container');
                 // console.log('contact controller');
                 // console.log(data); // TODO: да сменя getMenu() or remove dataService
+                $('#logo2').addClass('hide');
                 const html = template(data);
                 $container.html(html);
             })

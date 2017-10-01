@@ -10,6 +10,7 @@ class ProfileController {
                 const $container = $('#app-container');
                 // console.log('location controller');
                 // console.log(data); // TODO: да сменя getMenu() с getProfileData()
+                $('#logo2').addClass('hide');
                 const html = template(data);
                 $container.html(html);
             })

@@ -10,6 +10,7 @@ class MenuController {
                 const $container = $('#app-container');
                 // console.log('menu controller');
                 // console.log(data); // TODO: create getMenuItemById()
+                $('#logo2').addClass('hide');
                 const html = template(data);
                 $container.html(html);
             })

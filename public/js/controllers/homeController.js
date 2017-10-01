@@ -11,6 +11,7 @@ class HomeController {
                 // console.log('home controller');
                 console.log(data);
                 //:TODO да сменя getMenu() с постове
+                $('#logo2').removeClass('hide');
                 const html = template(data);
                 $container.html(html);
             })
