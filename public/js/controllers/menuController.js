@@ -10,11 +10,72 @@ class MenuController {
                 const $container = $('#app-container');
                 // console.log('menu controller');
                 // console.log(data); // TODO: create getMenuItemById()
+                let dataArr = [];
+                dataArr = $.map(data, x => x)
+                    // console.log(dataArr);
                 $('#logo2').addClass('hide');
-                const html = template(data);
+
+                //Header info - start
+                const $title = $('<h1>');
+                $title.text('Dinner Menu');
+                const $h5 = $('<h5>');
+                $h5.text('Neapolitan pizza and grandmother\'s kitchen.');
+                $('.header-info').html('');
+                $('.header-info').append($title);
+                $('.header-info').append($h5);
+                //Header info - end
+
+                // After header bar - start
+                const $h4 = $('<h4>');
+                $h4.text('Home >> Menu');
+                $('.info-left').html('');
+                $('.info-left').append($h4);
+
+                const $input = $('<input>');
+                $input.attr('placeholder', 'Search this website');
+                $input.addClass('form-control search-right');
+                const $searchButton = $('<button>');
+                $searchButton.text('Search');
+                $searchButton.addClass('btn btn-success search-right');
+
+                $('#search-right').html('');
+                $('#search-right').append($input);
+                $('#search-right').append($searchButton);
+                // After header bar - end
+
+
+                const html = template(dataArr);
                 $container.html(html);
+
+
+            }).then(() => {
+                $("#add-menu").submit((e) => {
+                    e.preventDefault();
+                    alert(e.target);
+                    console.log(e);
+                });
             })
     }
+
+    //addAutocomplete("cuisine", "cuisine", data, true); // From input 
+    /* function addAutocomplete(property, field, data, isInArray) {
+        isInArray = isInArray || false;
+        let options = [];
+        if (isInArray) {
+            data.map(r => r[property])
+                .forEach((array) => {
+                    options.push(...array);
+                });
+            options = options.filter(function(elem, index, self) {
+                return index == self.indexOf(elem);
+            });
+        } else {
+            options = data.map(r => r[property]).filter(function(elem, index, self) {
+                return index == self.indexOf(elem);
+            });
+        }
+        $(`#${field}`).autocomplete({ source: options });
+    } */
 
 }
 

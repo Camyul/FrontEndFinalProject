@@ -1,3 +1,8 @@
+@font-face {
+    font-family: LegueGothic;
+    src: url('../assets/fonts/LeagueGothic-Regular.otf');
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -82,10 +87,41 @@ header {
 }
 
 .location-title {
-    font-size: 18px;
-    font-family: league gothic sans-serif;
+    font-size: 21px;
+    font-family: LegueGothic, sans-serif;
     font-weight: bold;
     color: #cac6a1;
+}
+
+#menu-profile {
+    font-family: LegueGothic;
+    color: #442917;
+}
+
+.menu-list {
+    align-items: center;
+    background-color: transparent;
+    padding-right: 0.7em;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: center;
+    margin-left: 120px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#img-list {
+    width: 150px;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 0.5em solid white;
 }
 
 div p span {
@@ -159,6 +195,11 @@ nav {
     width: 85%;
     padding-right: 15%;
     z-index: 999;
+}
+
+.nav li {
+    background-color: rgb(147, 140, 123);
+    text-transform: uppercase;
 }
 
 .nav li a {

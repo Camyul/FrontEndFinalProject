@@ -11,18 +11,23 @@ class LocationController {
                 // console.log('location controller');
                 // console.log(data); // TODO: да сменя getMenu() с or remove dataService
                 $('#logo2').addClass('hide');
+
+                //Header info - start
                 const $title = $('<h1>');
                 $title.text('store location');
                 const $h5 = $('<h5>');
                 $h5.text('Neapolitan pizza and grandmother\'s kitchen.');
+                $('.header-info').html('');
                 $('.header-info').append($title);
                 $('.header-info').append($h5);
-
-                const $h4 = $('<h4>');
-                $h4.text('Home >> Localization');
-                $('.info-left').append($h4);
+                //Header info - end
 
                 // After header bar - start
+                const $h4 = $('<h4>');
+                $h4.text('Home >> Localization');
+                $('.info-left').html('');
+                $('.info-left').append($h4);
+
                 const $input = $('<input>');
                 $input.attr('placeholder', 'Search this website');
                 $input.addClass('form-control search-right');
@@ -30,6 +35,7 @@ class LocationController {
                 $searchButton.text('Search');
                 $searchButton.addClass('btn btn-success search-right');
 
+                $('#search-right').html('');
                 $('#search-right').append($input);
                 $('#search-right').append($searchButton);
                 // After header bar - end
