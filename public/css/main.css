@@ -1,8 +1,9 @@
 header {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
     padding-top: 30px;
-    justify-content: flex-end;
     width: 100%;
     height: 200px;
     background-image: -ms-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
@@ -11,6 +12,61 @@ header {
     background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 359, color-stop(0, #7E4834), color-stop(100, #471414));
     background-image: -webkit-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
     background-image: radial-gradient(ellipse farthest-corner at center bottom, #7E4834 0%, #471414 100%);
+}
+
+.header-info {
+    margin-right: 55%;
+    width: 30%;
+    height: 250px;
+    background-color: transparent;
+}
+
+.header-info h1 {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header-info h5 {
+    color: #cac6a1;
+}
+
+#after-header {
+    background-color: #faf9f5;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 40px;
+    box-shadow: 1px 1px gray;
+}
+
+.after-header {
+    display: flex;
+}
+
+.info-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15px;
+    width: 40%;
+}
+
+.info-left {
+    width: 60%;
+    color: #847770;
+    text-transform: uppercase;
+}
+
+.search-right {
+    border-radius: 30px !important;
+}
+
+.search-right::-webkit-input-placeholder {
+    font-style: italic;
+}
+
+.search-right::-moz-placeholder {
+    font-style: italic;
 }
 
 #app-container {
@@ -23,6 +79,17 @@ header {
 #location-container {
     display: flex;
     flex-direction: row;
+}
+
+.location-title {
+    font-size: 18px;
+    font-family: league gothic sans-serif;
+    font-weight: bold;
+    color: #cac6a1;
+}
+
+div p span {
+    color: #716851;
 }
 
 .content {
@@ -102,14 +169,6 @@ nav {
 .nav li a:hover {
     color: rgb(210, 201, 165);
     background-color: rgb(147, 140, 123);
-}
-
-#after-header {
-    background-color: #faf9f5;
-    display: flex;
-    width: 100%;
-    height: 50px;
-    box-shadow: 1px 1px gray;
 }
 
 
