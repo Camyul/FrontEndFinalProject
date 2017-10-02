@@ -1,4 +1,25 @@
 const dataService = (() => {
+
+    function getMenuById(id) {
+        return new Promise((resolve, reject) => {
+            const dbRefMenu = firebase.database().ref()
+                .child('menu');
+            let menuItems;
+            dbRefMenu.on('value', snap => {
+
+                menuItems = snap.val();
+                let menuItem;
+                $.map(menuItems, x => x).forEach((el) => {
+
+                    if (el.id === +id.id) {
+                        menuItem = el;
+                    }
+                });
+                resolve(menuItem);
+            })
+        })
+    }
+
     function getMenu() {
         return new Promise((resolve, reject) => {
             const dbRefMenu = firebase.database().ref()
@@ -24,7 +45,8 @@ const dataService = (() => {
     }
     return {
         getMenu,
-        initMap
+        initMap,
+        getMenuById
     };
 })();
 

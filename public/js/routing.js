@@ -21,7 +21,7 @@ const router = (() => {
                 homeController.home();
             }).on('menu/:id', (params) => {
                 const menuController = new MenuController(dataService, templateLoader);
-                // menuController.getById();
+                menuController.getMenuById(params);
 
                 // console.log('menu router');
                 // console.log(`menu ${JSON.stringify(params)}`);
