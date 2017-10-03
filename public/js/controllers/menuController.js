@@ -40,6 +40,45 @@ class MenuController {
 
                 const html = template(data);
                 $container.html(html);
+
+                //Entire Form (handler)
+                $('#newComment').submit((e) => {
+                    e.preventDefault();
+
+                    const $form = $(this);
+
+                    //disable submit button
+                    $form.find('#saveForm').prop('disabled', true);
+
+                    // Check for auth
+                    const user = firebase.auth().currentUser;
+                    const commentarToSend = $('#comment').val().trim();
+                    if (user) {
+                        //get values to send to Firebase
+                        $('#comment').val('');
+                        if (commentarToSend.length < 2) {
+                            toastr.warning('Comment must be min 2 simbols');
+                            return false;
+                        } else {
+                            toastr.success('You are comment successful');
+                        }
+
+                        const newActivity = {
+                            "description": commentarToSend,
+                            "userId": user.uid,
+                            "CreatedOn": Number(Date.now()),
+                            "IsDeleted": false
+                        }
+
+                        const menuItemId = $('#menu-details').attr('data');
+                        this.dataService.addCommentToDb(newActivity, menuItemId);
+                    } else {
+                        toastr.error('Must be logged to comment');
+                        return false;
+                    }
+
+                    return false;
+                })
             })
     }
 

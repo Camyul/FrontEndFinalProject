@@ -129,30 +129,87 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
 }
 
 .menu-detail {
     display: flex;
     font-size: 30px;
+    text-align: center;
 }
 
-#menu-details h3 {
+.menu-detail-product {
+    margin-top: 5px;
+    padding: 10px;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 0.5em solid white;
+    border-radius: 10px;
+}
+
+#menu-details div {
+    width: 100%;
+    border-radius: 10px;
     font-family: LegueGothic;
     color: #442917;
     text-transform: uppercase;
     font-size: 50px;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 0.2em solid white;
+}
+
+#menu-details h3 {
+    width: 100%;
+    border-radius: 10px;
+    font-family: LegueGothic;
+    color: #442917;
+    text-transform: uppercase;
+    font-size: 50px;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 0.2em solid white;
 }
 
 #menu-details img {
     display: flex;
     justify-content: center;
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 0.2em solid white;
 }
 
-#menu-details h4 {
+.desc {
     font-family: LegueGothic;
     color: #7E4834;
     font-size: 50px;
+    text-transform: uppercase;
+}
+
+#newComment {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 10px;
+    font-family: LegueGothic;
+    color: #888888;
+    font-size: 50px;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 0.2em solid white;
+}
+
+#menu-details h4 {
+    width: 100%;
+    border-radius: 10px;
+    font-family: LegueGothic;
+    color: #7E4834;
+    font-size: 50px;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 0.2em solid white;
+}
+
+#saveForm {
+    display: flex;
+    border-radius: 30px !important;
 }
 
 div p span {

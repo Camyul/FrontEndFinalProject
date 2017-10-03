@@ -1,5 +1,20 @@
 const dataService = (() => {
 
+    function addCommentToDb(comment, menuItemId) {
+        return new Promise((resolve, reject) => {
+            // Add comment in table with all comments
+            const dbRefComment = firebase.database().ref()
+                .child('comments');
+            dbRefComment.push(comment);
+
+            // Add comment to current menuItem list of comments
+            const dbRefMenu = firebase.database().ref()
+                .child('menu');
+            const dbRefMenuItem = dbRefMenu.child(menuItemId);
+            dbRefMenuItem.child('comments').push(comment);
+        })
+    }
+
     function getMenuById(key) {
         return new Promise((resolve, reject) => {
             const dbRefMenu = firebase.database().ref()
@@ -57,7 +72,8 @@ const dataService = (() => {
     return {
         getMenu,
         initMap,
-        getMenuById
+        getMenuById,
+        addCommentToDb
     };
 })();
 
