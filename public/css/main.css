@@ -124,6 +124,37 @@ header {
     border: 0.5em solid white;
 }
 
+#menu-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-detail {
+    display: flex;
+    font-size: 30px;
+}
+
+#menu-details h3 {
+    font-family: LegueGothic;
+    color: #442917;
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+#menu-details img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#menu-details h4 {
+    font-family: LegueGothic;
+    color: #7E4834;
+    font-size: 50px;
+}
+
 div p span {
     color: #716851;
 }
