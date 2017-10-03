@@ -1,22 +1,24 @@
 const dataService = (() => {
 
-    function getMenuById(id) {
+    function getMenuById(key) {
         return new Promise((resolve, reject) => {
             const dbRefMenu = firebase.database().ref()
                 .child('menu');
-            let menuItems;
-            dbRefMenu.on('value', snap => {
-
-                menuItems = snap.val();
-                let menuItem;
-                $.map(menuItems, x => x).forEach((el) => {
-
-                    if (el.id === +id.id) {
-                        menuItem = el;
+            let item;
+            dbRefMenu.on('value', snapshot => {
+                snapshot.forEach((data) => {
+                    if (data.key === key.id) {
+                        item = {
+                            key: data.key, //this is to get the ID
+                            Title: data.val().Title,
+                            Description: data.val().Description,
+                            Price: data.val().Price,
+                            img: data.val().img,
+                        }
+                        resolve(item);
                     }
                 });
-                resolve(menuItem);
-            })
+            });
         })
     }
 
@@ -24,11 +26,20 @@ const dataService = (() => {
         return new Promise((resolve, reject) => {
             const dbRefMenu = firebase.database().ref()
                 .child('menu');
-            let menuItems;
-            dbRefMenu.on('value', snap => {
-                menuItems = snap.val();
-                resolve(menuItems);
-            })
+            dbRefMenu.on('value', snapshot => {
+                const list = new Array();
+                snapshot.forEach((data) => {
+                    const item = {
+                        key: data.key, //this is to get the ID
+                        Title: data.val().Title,
+                        Description: data.val().Description,
+                        Price: data.val().Price,
+                        img: data.val().img,
+                    }
+                    list.push(item);
+                });
+                resolve(list);
+            });
         })
     }
 

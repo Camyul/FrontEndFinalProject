@@ -49,9 +49,7 @@ class MenuController {
                 const $container = $('#app-container');
                 // console.log('menu controller');
                 // console.log(data);
-                let dataArr = [];
-                dataArr = $.map(data, x => x)
-                    // console.log(dataArr);
+
                 $('#logo2').addClass('hide');
 
                 //Header info - start
@@ -82,7 +80,7 @@ class MenuController {
                 $('#search-right').append($searchButton);
                 // After header bar - end
 
-                const html = template(dataArr);
+                const html = template(data);
                 $container.html(html);
             })
     }
