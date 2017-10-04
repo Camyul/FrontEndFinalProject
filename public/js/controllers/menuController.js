@@ -21,9 +21,14 @@ class MenuController {
 
                 // After header bar - start
                 const $h4 = $('<h4>');
-                $h4.text(`Home >> Menu >> ${data.Title}`);
+                const htmlH4 = '<a class="level1" href="" >Home</a> <span>>></span> <a class="level2" href="" >Menu</a> <span>>></span> <a class="level3" href="" >Some</a>';
+                $h4.html(htmlH4);
                 $('.info-left').html('');
                 $('.info-left').append($h4);
+                $('.level1').attr('href', '#/home');
+                $('.level2').attr('href', '#/menu');
+                $('.level3').attr('href', `#/${data.Title}`);
+                $('.level3').text(`${data.Title}`);
 
                 const $input = $('<input>');
                 $input.attr('placeholder', 'Search this website');
@@ -108,9 +113,12 @@ class MenuController {
 
                 // After header bar - start
                 const $h4 = $('<h4>');
-                $h4.text('Home >> Menu');
+                const htmlH4 = '<a class="level1" href="" >Home</a> <span>>></span> <a class="level2" href="" >Menu</a>';
+                $h4.html(htmlH4);
                 $('.info-left').html('');
                 $('.info-left').append($h4);
+                $('.level1').attr('href', '#/home');
+                $('.level2').attr('href', '#/menu');
 
                 const $input = $('<input>');
                 $input.attr('placeholder', 'Search this website');

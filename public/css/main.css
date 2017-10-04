@@ -19,6 +19,18 @@ header {
     background-image: radial-gradient(ellipse farthest-corner at center bottom, #7E4834 0%, #471414 100%);
 }
 
+.contact-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-subsc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
 .comments-container {
     display: flex;
     flex-direction: column;
@@ -70,8 +82,21 @@ header {
     background-color: #faf9f5;
     padding-left: 15%;
     padding-right: 15%;
-    height: 40px;
     box-shadow: 1px 1px gray;
+}
+
+#after-header a {
+    color: #847770;
+    text-transform: uppercase;
+}
+
+#after-header a:hover {
+    text-decoration: none;
+    font-style: oblique;
+}
+
+#after-header span {
+    font-size: 10px;
 }
 
 .after-header {

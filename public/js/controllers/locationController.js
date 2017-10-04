@@ -23,9 +23,12 @@ class LocationController {
 
                 // After header bar - start
                 const $h4 = $('<h4>');
-                $h4.text('Home >> Localization');
+                const htmlH4 = '<a class="level1" href="" >Home</a> <span>>></span> <a class="level2" href="" >Location</a>';
+                $h4.html(htmlH4);
                 $('.info-left').html('');
                 $('.info-left').append($h4);
+                $('.level1').attr('href', '#/home');
+                $('.level2').attr('href', '#/location');
 
                 const $input = $('<input>');
                 $input.attr('placeholder', 'Search this website');
