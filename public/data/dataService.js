@@ -29,6 +29,7 @@ const dataService = (() => {
                             Description: data.val().Description,
                             Price: data.val().Price,
                             img: data.val().img,
+                            comments: data.val().comments
                         }
                         resolve(item);
                     }

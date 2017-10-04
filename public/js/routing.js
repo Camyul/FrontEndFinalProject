@@ -22,9 +22,14 @@ const router = (() => {
             }).on('menu/:id', (params) => {
                 const menuController = new MenuController(dataService, templateLoader);
                 menuController.getMenuById(params);
+                //menuController.getCommentsForItem(params);
 
-                // console.log('menu router');
-                // console.log(`menu ${JSON.stringify(params)}`);
+                /*                 const menuController = new MenuController(dataService, templateLoader);
+                                return new Promise((res, req) => {
+                                    res(menuController.getMenuById(params));
+                                }).then(() => {
+                                    menuController.getCommentsForItem(params);
+                                }); */
             })
             .on('menu', () => {
                 const menuController = new MenuController(dataService, templateLoader);

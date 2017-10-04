@@ -9,7 +9,6 @@ class MenuController {
             .then(([template, data]) => {
                 const $container = $('#app-container');
                 $('#logo2').addClass('hide');
-
                 //Header info - start
                 const $title = $('<h1>');
                 $title.text('Dinner Menu');
@@ -38,6 +37,7 @@ class MenuController {
                 $('#search-right').append($searchButton);
                 // After header bar - end
 
+                // console.log(data);
                 const html = template(data);
                 $container.html(html);
 
@@ -56,8 +56,8 @@ class MenuController {
                     if (user) {
                         //get values to send to Firebase
                         $('#comment').val('');
-                        if (commentarToSend.length < 2) {
-                            toastr.warning('Comment must be min 2 simbols');
+                        if (commentarToSend.length < 50) {
+                            toastr.warning('Comment must be min 50 simbols');
                             return false;
                         } else {
                             toastr.success('You are comment successful');

@@ -19,6 +19,36 @@ header {
     background-image: radial-gradient(ellipse farthest-corner at center bottom, #7E4834 0%, #471414 100%);
 }
 
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.comment-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.comment-img {
+    margin-right: 25px;
+    display: flex;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0.1em 0.1em #888888;
+    border: 0.2em solid white;
+}
+
+.comment-desc {
+    display: flex;
+    height: 160px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 1px solid gray;
+}
+
 .header-info {
     margin-right: 55%;
     width: 30%;
@@ -76,9 +106,16 @@ header {
 
 #app-container {
     display: flex;
+    flex-direction: column;
     padding-left: 15%;
     padding-right: 15%;
     background-color: #efedd4;
+}
+
+.container-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #location-container {
@@ -109,12 +146,13 @@ header {
 .menu-item {
     display: flex;
     justify-content: center;
-    margin-left: 120px;
+    width: 250px;
 }
 
 .menu-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -140,10 +178,6 @@ header {
 
 .menu-detail-product {
     margin-top: 5px;
-    padding: 10px;
-    box-shadow: 0 0.5em 0.5em #888888;
-    border: 0.5em solid white;
-    border-radius: 10px;
 }
 
 #menu-details div {
