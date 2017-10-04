@@ -52,9 +52,10 @@ class MenuController {
 
                     // Check for auth
                     const user = firebase.auth().currentUser;
-                    const commentarToSend = $('#comment').val().trim();
+                    const commentarToSend = $('#comment').val()
+                        .trim();
                     if (user) {
-                        //get values to send to Firebase
+                        //get values to send to Firebaseconsole.log(user.photoURL);
                         $('#comment').val('');
                         if (commentarToSend.length < 50) {
                             toastr.warning('Comment must be min 50 simbols');
@@ -62,14 +63,18 @@ class MenuController {
                         } else {
                             toastr.success('You are comment successful');
                         }
+                        //const utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+                        const utc = new Date().toJSON()
+                            .slice(0, 10);
 
                         const newActivity = {
                             "description": commentarToSend,
-                            "userId": user.uid,
-                            "CreatedOn": Number(Date.now()),
+                            "authorPhoto": user.photoURL,
+                            "CreatedOn": utc,
                             "IsDeleted": false
                         }
 
+                        //console.log(newActivity);
                         const menuItemId = $('#menu-details').attr('data');
                         this.dataService.addCommentToDb(newActivity, menuItemId);
                     } else {

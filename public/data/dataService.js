@@ -24,7 +24,7 @@ const dataService = (() => {
                 snapshot.forEach((data) => {
                     if (data.key === key.id) {
                         item = {
-                            key: data.key, //this is to get the ID
+                            key: data.key,
                             Title: data.val().Title,
                             Description: data.val().Description,
                             Price: data.val().Price,
@@ -46,7 +46,7 @@ const dataService = (() => {
                 const list = new Array();
                 snapshot.forEach((data) => {
                     const item = {
-                        key: data.key, //this is to get the ID
+                        key: data.key,
                         Title: data.val().Title,
                         Description: data.val().Description,
                         Price: data.val().Price,

@@ -8,8 +8,7 @@ class LocationController {
         Promise.all([this.templateLoader.get('location')])
             .then(([template]) => {
                 const $container = $('#app-container');
-                // console.log('location controller');
-                // console.log(data); // TODO: да сменя getMenu() с or remove dataService
+                // console.log(data);
                 $('#logo2').addClass('hide');
 
                 //Header info - start

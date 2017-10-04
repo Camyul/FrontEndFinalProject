@@ -34,7 +34,10 @@
     <div class="comments-container">
         {{#each comments}}
         <div class="comment-container">
-            <img src="http://www.bikepro.com/products/handlebars/hndlbars_jpg/d1d_scott_at2.jpg" class="comment-img" alt="">
+            <div>
+            <img src="{{authorPhoto}}" class="comment-img" alt="">
+            <div>{{CreatedOn}}</div>
+            </div>
             <div class="comment-desc">
                 {{description}}
             </div>
