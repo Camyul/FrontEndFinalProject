@@ -38,6 +38,7 @@ class MenuController {
                 $searchButton.addClass('btn btn-success search-right');
 
                 $('#search-right').html('');
+                $('#slogan').text('');
                 $('#search-right').append($input);
                 $('#search-right').append($searchButton);
                 // After header bar - end
@@ -128,6 +129,7 @@ class MenuController {
                 $searchButton.addClass('btn btn-success search-right');
 
                 $('#search-right').html('');
+                $('#slogan').text('');
                 $('#search-right').append($input);
                 $('#search-right').append($searchButton);
                 // After header bar - end
