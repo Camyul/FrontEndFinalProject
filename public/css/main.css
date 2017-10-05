@@ -180,28 +180,50 @@ header {
 }
 
 .menu-list {
-    align-items: center;
+    display: flex;
     background-color: transparent;
     padding-right: 0.7em;
-    margin-left: 0;
-    padding-left: 0;
+    margin-bottom: 50px;
+}
+
+.menu-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    color: #999785;
+    width: 50%;
+}
+
+.menu-desc h3 {
+    margin-top: 0px;
+    padding-bottom: 20px;
+}
+
+.menu-desc-hidden {
+    overflow: hidden;
+}
+
+.menu-img {
+    display: flex;
+    width: 50%;
 }
 
 .menu-item {
     display: flex;
     justify-content: center;
-    width: 250px;
+    width: 300px;
+    height: 150px;
 }
 
 .menu-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 }
 
 #img-list {
-    width: 150px;
+    display: flex;
     box-shadow: 0 0.5em 0.5em #888888;
     border: 0.5em solid white;
 }
@@ -301,6 +323,11 @@ div p span {
     height: 400px;
 }
 
+#home-btn {
+    margin-top: -16px;
+    background-color: #a9a37f;
+}
+
 footer {
     background-color: #f2f1e8;
 }
@@ -383,11 +410,14 @@ nav {
 
 #myCarousel {
     display: flex;
+    justify-content: center;
     width: 100%;
 }
 
 .carousel-inner {
-    background-color: transparent;
+    padding-bottom: 6px;
+    display: flex;
+    justify-content: center;
 }
 
 .home-container {
@@ -401,9 +431,16 @@ nav {
     justify-content: center;
 }
 
+#carousel-item2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .map-holder {
     display: flex;
-    width: 70%;
+    width: 100%;
     justify-content: center;
     border: 0.3em solid white;
 }

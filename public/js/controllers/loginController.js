@@ -14,7 +14,7 @@ const loginController = (() => $('#login').click(() => {
             // The signed-in user info.
             const user = result.user;
 
-            document.location = '#/profile';
+            document.location.href = '#/profile';
             router.init();
 
         })

@@ -5,7 +5,7 @@ class HomeController {
     }
 
     home() {
-        Promise.all([this.templateLoader.get('home'), this.dataService.getMenu()])
+        Promise.all([this.templateLoader.get('home'), this.dataService.getNItemsFromMenu(3)])
             .then(([template, data]) => {
                 const $container = $('#app-container');
                 // console.log('menu controller');
@@ -34,6 +34,10 @@ class HomeController {
                 $('#slogan').text('"Rossopomodoro has restaurants in countries around the world. Wherever you are, you are never far from a true Neapolitan experience."');
 
                 // After header bar - end
+
+                $('#home-btn').click(() => {
+                    document.location.href = '#/menu';
+                });
 
                 const html = template(data);
                 $container.html(html);

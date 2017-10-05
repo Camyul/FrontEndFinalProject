@@ -5,7 +5,7 @@ const logoutController = (() => $('#logout').click(() => {
         .then(() => {
             // Sign-out successful.
             //document.location = '/';
-            router.navigate('/home');
+            router.navigate('#/home');
 
         })
         .catch((error) => {

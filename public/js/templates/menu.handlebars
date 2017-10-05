@@ -1,16 +1,21 @@
 <div class="container-menu">
     <div class="menu-container">
         {{#each this}}
-        <div class="menu-item">
-        <div class="menu-list" data-id="{{key}}">
-            <h3><a href="#/menu/{{key}}" id="menu-profile">{{Title}}</a></h3>
-            <div>
-                <div class="">
-                    <img src="{{img}}" id="img-list" class="img-responsive center-block" alt="">
-                </div>
-            </div>
-        </div>
-        </div>
-        {{/each}}
+                    <div class="menu-item">
+                        <div class="menu-list" data-id="{{key}}">
+                            <div class="menu-img">
+                                <img src="{{img}}" id="img-list" class="img-responsive center-block" alt="">
+                            </div>
+                            <div class="menu-desc">
+                    
+                                    <h3><a href="#/menu/{{key}}" id="menu-profile">{{Title}}</a></h3>
+          
+                                <div class="menu-desc-hidden">
+                                    <p>{{Description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
     </div>
 </div>

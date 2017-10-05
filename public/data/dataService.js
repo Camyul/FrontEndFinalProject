@@ -59,6 +59,28 @@ const dataService = (() => {
         })
     }
 
+    function getNItemsFromMenu(n) {
+        return new Promise((resolve, reject) => {
+            const dbRefMenu = firebase.database().ref()
+                .child('menu');
+            dbRefMenu.on('value', snapshot => {
+                const list = new Array();
+                snapshot.forEach((data) => {
+                    const item = {
+                        key: data.key,
+                        Title: data.val().Title,
+                        Description: data.val().Description,
+                        Price: data.val().Price,
+                        img: data.val().img,
+                    }
+                    list.push(item);
+                });
+                const result = list.slice(0, n);
+                resolve(result);
+            });
+        })
+    }
+
     function initMap() {
         let uluru = { lat: 45.45103, lng: 9.200786 };
         let map = new google.maps.Map(document.getElementById('map'), {
@@ -72,8 +94,9 @@ const dataService = (() => {
     }
     return {
         getMenu,
-        initMap,
+        getNItemsFromMenu,
         getMenuById,
+        initMap,
         addCommentToDb
     };
 })();

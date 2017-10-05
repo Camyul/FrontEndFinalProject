@@ -51,7 +51,7 @@ const router = (() => {
             })
             .on('logout', () => {
                 logoutController,
-                document.location = '#/home';
+                document.location.href = '#/home';
             })
             .on('profile', () => {
                 const profileController = new ProfileController(dataService, templateLoader);
@@ -59,7 +59,8 @@ const router = (() => {
                 // console.log('profile router');
             })
             .on('/', () => {
-                document.location = '#/home';
+                document.location.href = '#/home';
+                router.init();
             })
             .resolve();
     }
