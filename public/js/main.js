@@ -30,3 +30,7 @@ handleSignedOutUser = function() {
     $('#login').removeClass('hide');
     // console.log('Logout successful');
 };
+
+// Caroucel event
+
+//End Caroucel
