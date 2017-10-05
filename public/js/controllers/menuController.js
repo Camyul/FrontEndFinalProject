@@ -142,6 +142,38 @@ class MenuController {
             })
     }
 
+    getComments() {
+        Promise.all([this.templateLoader.get('before-comments'), this.dataService.getNComments(5)])
+            .then(([template, comments]) => {
+                const $container = $('#before-col2');
+                const $container2 = $('#before-col3');
+
+
+                // Before footer - start
+                $('#before-container').removeClass('hide');
+
+
+
+                // Before footer - end
+
+                const html = template(comments);
+                $container.html(html);
+                $container2.html(html);
+
+            })
+            .then(() => {
+                const $h3 = $('<h3>');
+                $h3.addClass('location-title text-center');
+                $h3.text('Recent Posts');
+                const $h33 = $('<h3>');
+                $h33.addClass('location-title text-center');
+                $h33.text('Recent Comments');
+
+                $('#before-col2').prepend($h33);
+                $('#before-col3').prepend($h3);
+            })
+    }
+
     //addAutocomplete("cuisine", "cuisine", data, true); // From input 
     /* function addAutocomplete(property, field, data, isInArray) {
         isInArray = isInArray || false;

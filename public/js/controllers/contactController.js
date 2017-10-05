@@ -13,6 +13,7 @@ class ContactController {
 
                 $('#logo2').addClass('hide');
                 $('#home-btn').addClass('hide');
+                $('#before-container').addClass('hide');
 
                 //Header info - start
                 const $title = $('<h1>');

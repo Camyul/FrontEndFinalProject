@@ -172,6 +172,7 @@ header {
     font-family: LegueGothic, sans-serif;
     font-weight: bold;
     color: #cac6a1;
+    text-transform: uppercase;
 }
 
 #menu-profile {
@@ -403,6 +404,33 @@ nav {
 .nav li a:hover {
     color: rgb(210, 201, 165);
     background-color: rgb(147, 140, 123);
+}
+
+#before-footer {
+    background-color: #f2f1e8;
+}
+
+#before-container {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid gray;
+}
+
+#before-col1 {
+    font-family: LegueGothic;
+    width: 37%;
+    margin-top: 20px;
+}
+
+#before-col2 {
+    font-family: LegueGothic;
+}
+
+#before-col3 {
+    font-family: LegueGothic;
 }
 
 

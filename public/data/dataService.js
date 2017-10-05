@@ -1,5 +1,24 @@
 const dataService = (() => {
 
+    function getNComments(n) {
+        return new Promise((resolve, reject) => {
+            const dbRefMenu = firebase.database().ref()
+                .child('comments');
+            dbRefMenu.on('value', snapshot => {
+                const list = new Array();
+                snapshot.forEach((data) => {
+                    const item = {
+                        key: data.key,
+                        description: data.val().description.substr(0, 80)
+                    }
+                    list.push(item);
+                });
+                const result = list.slice(0, n);
+                resolve(result);
+            });
+        })
+    }
+
     function addCommentToDb(comment, menuItemId) {
         return new Promise((resolve, reject) => {
             // Add comment in table with all comments
@@ -97,7 +116,8 @@ const dataService = (() => {
         getNItemsFromMenu,
         getMenuById,
         initMap,
-        addCommentToDb
+        addCommentToDb,
+        getNComments
     };
 })();
 

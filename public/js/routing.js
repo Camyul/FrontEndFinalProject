@@ -34,6 +34,7 @@ const router = (() => {
             .on('menu', () => {
                 const menuController = new MenuController(dataService, templateLoader);
                 menuController.getMenu();
+                menuController.getComments();
                 // console.log('menu router');
             })
             .on('contact', () => {
@@ -44,6 +45,7 @@ const router = (() => {
             .on('location', () => {
                 const locationController = new LocationController(dataService, templateLoader);
                 locationController.getLocation();
+                locationController.getComments();
                 // console.log('location router');
             })
             .on('login', () => {

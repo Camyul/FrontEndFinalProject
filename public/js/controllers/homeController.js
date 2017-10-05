@@ -13,6 +13,7 @@ class HomeController {
 
                 $('#logo2').removeClass('hide');
                 $('#home-btn').removeClass('hide');
+                $('#before-container').addClass('hide');
 
                 //Header info - start
                 const $title = $('<h1>');
