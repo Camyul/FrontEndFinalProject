@@ -10,6 +10,7 @@ class LocationController {
                 const $container = $('#app-container');
                 // console.log(data);
                 $('#logo2').addClass('hide');
+                $('#home-btn').addClass('hide');
 
                 //Header info - start
                 const $title = $('<h1>');

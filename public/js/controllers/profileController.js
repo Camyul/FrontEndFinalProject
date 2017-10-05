@@ -11,6 +11,7 @@ class ProfileController {
                 // console.log('location controller');
                 // console.log(data); // TODO: да сменя getMenu() с getProfileData()
                 $('#logo2').addClass('hide');
+                $('#home-btn').addClass('hide');
 
                 //Header info - start
                 const $title = $('<h1>');

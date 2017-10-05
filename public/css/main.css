@@ -381,5 +381,58 @@ nav {
 
 /* Start Caroucel */
 
+#myCarousel {
+    display: flex;
+    width: 100%;
+}
+
+.carousel-inner {
+    background-color: transparent;
+}
+
+.home-container {
+    display: flex;
+}
+
+#carousel-item1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-holder {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    border: 0.3em solid white;
+}
+
+.map-holder>#map {
+    width: 100%;
+}
+
+.carousel-inner h3 {
+    font-family: LegueGothic;
+    color: #cac6a1;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.carousel-inner h4 {
+    font-family: LegueGothic;
+    color: #cac6a1;
+    font-size: 18px;
+}
+
+.carousel-inner h4 span {
+    color: #7E4834;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+}
+
 
 /* End Caroucel */

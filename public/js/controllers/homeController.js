@@ -11,7 +11,8 @@ class HomeController {
                 // console.log('menu controller');
                 // console.log(data);
 
-                $('#logo2').addClass('hide');
+                $('#logo2').removeClass('hide');
+                $('#home-btn').removeClass('hide');
 
                 //Header info - start
                 const $title = $('<h1>');
@@ -36,6 +37,9 @@ class HomeController {
 
                 const html = template(data);
                 $container.html(html);
+            })
+            .then(() => {
+                this.dataService.initMap();
             })
     }
 

@@ -9,6 +9,8 @@ class MenuController {
             .then(([template, data]) => {
                 const $container = $('#app-container');
                 $('#logo2').addClass('hide');
+                $('#home-btn').addClass('hide');
+
                 //Header info - start
                 const $title = $('<h1>');
                 $title.text('Dinner Menu');
