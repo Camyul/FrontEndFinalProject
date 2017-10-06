@@ -23,3 +23,10 @@ Here is The Italian Pizza.
 5. Menu item Details
   - it includes details for menu item
   - it includes comments for this menu item
+
+## Commands:
+  - npm start - Run server
+  - npm run dev - Run server in development mode
+  - gulp lint - Check .js files for errors
+  - gulp build - minify .js and create build folder
+  - gulp clean - delete build folder
