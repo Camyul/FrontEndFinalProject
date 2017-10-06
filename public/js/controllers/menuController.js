@@ -74,10 +74,11 @@ class MenuController {
                         //const utc = new Date().toJSON().slice(0,10).replace(/-/g,'/');
                         const utc = new Date().toJSON()
                             .slice(0, 10);
-
+                        // console.log(user);
                         const newActivity = {
                             "description": commentarToSend,
                             "authorPhoto": user.photoURL,
+                            "authorName": user.displayName,
                             "CreatedOn": utc,
                             "IsDeleted": false
                         }

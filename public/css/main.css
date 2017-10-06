@@ -61,11 +61,18 @@ header {
 
 .comment-desc {
     display: flex;
+    flex-direction: column;
     height: 160px;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0.5em 0.5em #888888;
     border: 1px solid gray;
+}
+
+.comment-desc p {
+    font-family: LegueGothic;
+    font-size: 25px;
+    color: #442917;
 }
 
 .header-info {
