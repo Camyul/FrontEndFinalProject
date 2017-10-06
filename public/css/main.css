@@ -236,6 +236,10 @@ header {
     border: 0.5em solid white;
 }
 
+#img-list-home {
+    float: left;
+}
+
 #menu-details {
     display: flex;
     flex-direction: column;
@@ -437,6 +441,7 @@ nav {
 }
 
 #before-col3 {
+    width: 34%;
     font-family: LegueGothic;
 }
 
@@ -459,6 +464,40 @@ nav {
     display: flex;
 }
 
+.home-post-container {
+    display: block;
+}
+
+.home-comment-desc p {
+    font-family: LegueGothic;
+    font-size: 25px;
+    color: #442917;
+}
+
+.home-comment-container {
+    margin-left: 20px;
+}
+
+.home-comment-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 1px solid gray;
+}
+
+#home-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#home-item3 {
+    display: flex;
+}
+
 #carousel-item1 {
     display: flex;
     flex-direction: column;
@@ -470,7 +509,12 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+
+#carousel-item3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .map-holder {

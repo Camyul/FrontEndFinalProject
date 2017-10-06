@@ -13,7 +13,30 @@ const dataService = (() => {
                     }
                     list.push(item);
                 });
-                const result = list.slice(0, n);
+                const result = list.sort((a, b) => a.CreatedOn - b.CreatedOn)
+                    .reverse()
+                    .slice(0, n);
+                resolve(result);
+            });
+        })
+    }
+
+    function getPost() {
+        return new Promise((resolve, reject) => {
+            const dbRefMenu = firebase.database().ref()
+                .child('comments');
+            dbRefMenu.on('value', snapshot => {
+                const list = new Array();
+                snapshot.forEach((data) => {
+                    const item = {
+                        key: data.key,
+                        description: data.val().description,
+                        authorPhoto: data.val().authorPhoto,
+                        authorName: data.val().authorName
+                    }
+                    list.push(item);
+                });
+                const result = list.slice(list.length - 1, list.length);
                 resolve(result);
             });
         })
@@ -117,7 +140,8 @@ const dataService = (() => {
         getMenuById,
         initMap,
         addCommentToDb,
-        getNComments
+        getNComments,
+        getPost
     };
 })();
 

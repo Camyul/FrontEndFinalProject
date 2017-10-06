@@ -1,0 +1,15 @@
+<div class="home-comment-container">
+     {{#each this}}
+    <div class="home-comment-desc">
+        <div class="home-post-container">
+            <div id="img-list-home">
+                <img  src="{{authorPhoto}}" class="comment-img" alt="">
+            </div>
+        
+            <p>{{authorName}} says:</p>
+            {{description}}
+        </div>
+       
+    </div>
+    {{/each}}
+</div>

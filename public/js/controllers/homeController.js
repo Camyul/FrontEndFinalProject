@@ -45,8 +45,22 @@ class HomeController {
             })
             .then(() => {
                 this.dataService.initMap();
-            })
+            });
     }
+
+
+    getPost() {
+        Promise.all([this.templateLoader.get('home-post'), this.dataService.getPost()])
+            .then(([template, post]) => {
+                const $container = $('#home-item3');
+
+                // console.log(post);
+                const html = template(post);
+                $container.html(html);
+
+            });
+    }
+
 
 }
 

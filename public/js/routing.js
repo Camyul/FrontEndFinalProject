@@ -19,17 +19,10 @@ const router = (() => {
         navigo.on('home', () => {
                 const homeController = new HomeController(dataService, templateLoader);
                 homeController.home();
+                homeController.getPost();
             }).on('menu/:id', (params) => {
                 const menuController = new MenuController(dataService, templateLoader);
                 menuController.getMenuById(params);
-                //menuController.getCommentsForItem(params);
-
-                /*                 const menuController = new MenuController(dataService, templateLoader);
-                                return new Promise((res, req) => {
-                                    res(menuController.getMenuById(params));
-                                }).then(() => {
-                                    menuController.getCommentsForItem(params);
-                                }); */
             })
             .on('menu', () => {
                 const menuController = new MenuController(dataService, templateLoader);
