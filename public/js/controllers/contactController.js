@@ -43,6 +43,8 @@ class ContactController {
 
                 $('#search-right').html('');
                 $('#slogan').text('');
+                $('.slogan').addClass('hide');
+                $('#slogan2').text('');
                 $('#search-right').append($input);
                 $('#search-right').append($searchButton);
                 // After header bar - end

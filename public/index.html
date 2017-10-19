@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Front End Final Project</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="libs/toastr/build/toastr.min.css">
     <link rel="stylesheet" href="./assets/css/ionicons.min.css">
@@ -23,38 +24,59 @@
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="container-fluid">
-                <div class="collapse navbar-collapse"></div>
-                <img class="logo" src="./assets/images/Logo.png" alt="">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#/home">Home</a></li>
-                    <li><a href="#/contact">Contact</a></li>
-                    <li><a href="#/menu">Menu</a></li>
-                    <li><a href="#/location">Location</a></li>
-                    <li id="login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    <li>
-                        <a class="hide" id="profile" href="#/profile"></a>
-                    </li>
-                    <li class="hide" id="logout"><a href="#/logout">Logout</a></li>
-                </ul>
-            </div>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>                        
+                            </button>
+                    <img class="logo" src="./assets/images/Logo.png" alt="">
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/home">Home</a></li>
+                        <li><a href="#/contact">Contact</a></li>
+                        <li><a href="#/menu">Menu</a></li>
+                        <li><a href="#/location">Location</a></li>
+                        <li id="login"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li>
+                            <a class="hide" id="profile" href="#/profile"></a>
+                        </li>
+                        <li class="hide" id="logout"><a href="#/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="lifted-corner">
+                    <img src="./assets/images/lifted.png" alt="lifted-effect">
+                </div>
             </div>
         </nav>
-        <div class="header-info">
+        <div class="header-info-container">
+            <div class="container">
+                <div class="header-info">
+                </div>
+            </div>
         </div>
     </header>
     <section id="after-header">
-        <span id="slogan" class="text-center"></span>
-        <div class="after-header">
-            <div class="info-left"></div>
-            <div class="info-right">
-                <form id="search-right" class="form-inline" action="#"></form>
+        <div class="container text-center">
+            <div class="slogan hide">
+                <span id="slogan"></span>
+                <span id="slogan2"></span>
+                <img src="./assets/images/stars.png" id="stars" alt="stars">
+            </div>
+            <div class="after-header">
+                <div class="info-left"></div>
+                <div class="info-right">
+                    <form id="search-right" class="form-inline" action="#"></form>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="app-container"></section>
+    <section id="app-container">
+    </section>
 
     <section id="before-footer">
         <div class="hide" id="before-container">
@@ -79,6 +101,9 @@
                 <li><a href="#/menu">Menu</a></li>
                 <li><a href="#/location">Location</a></li>
             </ul>
+            <p>
+                <span class="font-italic">Designed by</span><a href="#" class="link"> ElegantThemes </a> - Single Page Application Final Project 2017
+            </p>
         </div>
     </footer>
 

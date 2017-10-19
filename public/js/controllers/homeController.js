@@ -20,7 +20,7 @@ class HomeController {
                 $title.text('Red Tomato House');
                 const $h5 = $('<h5>');
                 const $button = $('<button>');
-                $button.addClass('search-right btn btn-success');
+                $button.addClass('search-right btn btn-success home-page-btn');
                 $button.text('See all Reviews');
                 $h5.text('Here is The Italian Pizza.');
                 $('.header-info').html('');
@@ -32,7 +32,9 @@ class HomeController {
                 // After header bar - start
                 $('.info-left').html('');
                 $('#search-right').html('');
-                $('#slogan').text('"Rossopomodoro has restaurants in countries around the world. Wherever you are, you are never far from a true Neapolitan experience."');
+                $('#slogan').text('Rossopomodoro has restaurants around the world. Wherever you are, you are never far from a true Neapolitan experience.');
+                $('.slogan').removeClass('hide');
+                $('#slogan2').text('unc elementum lacus in gravida pellentesque urna dolor eleifend');
 
                 // After header bar - end
 
