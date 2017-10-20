@@ -198,6 +198,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 100px;
 }
 
 #location-container {
@@ -220,11 +221,16 @@ header {
     color: #442917;
 }
 
+.menu-profile {
+    font-family: LegueGothic;
+    color: #442917;
+}
+
 .menu-list {
     display: flex;
     background-color: transparent;
     padding-right: 0.7em;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 }
 
 .menu-desc {
@@ -259,10 +265,15 @@ header {
     width: 20%;
 }
 
+.menu-img2 {
+    display: flex;
+    width: 35%;
+}
+
 .menu-item {
     display: flex;
     justify-content: center;
-    height: 135px;
+    height: 85px;
 }
 
 .menu-container {
@@ -274,7 +285,14 @@ header {
 #img-list {
     display: flex;
     box-shadow: 0 0.5em 0.5em #888888;
-    border: 0.5em solid white;
+    border: 0.3em solid white;
+    justify-content: center;
+}
+
+.img-list {
+    display: flex;
+    box-shadow: 0 0.5em 0.5em #888888;
+    border: 0.3em solid white;
     justify-content: center;
 }
 
@@ -482,11 +500,18 @@ footer div li a {
 .container .nav li a {
     color: white;
     text-transform: uppercase;
+    font-size: 0.95em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .container .nav li a:hover {
     color: rgb(210, 201, 165);
     background-color: rgb(147, 140, 123);
+    font-family: "Georgia";
+    color: rgb(238, 228, 186);
+    font-style: italic;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.57);
 }
 
 .lifted-corner {
@@ -498,7 +523,7 @@ footer div li a {
 .lifted-corner-comment {
     position: absolute;
     left: 17px;
-    top: 391px;
+    top: 291px;
 }
 
 #before-footer {
@@ -562,11 +587,12 @@ footer div li a {
     font-family: "Georgia";
     color: rgb(255, 255, 255);
     line-height: 1.125;
-    text-align: left;
     text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.004);
 }
 
-.home-container {}
+.home-container {
+    padding-bottom: 40px;
+}
 
 app .home-post-container {
     display: block;
@@ -574,7 +600,7 @@ app .home-post-container {
 
 .home-post-container span {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.3em;
+    font-size: 0.9em;
     font-style: italic;
     color: #908f7c;
     line-height: 20px;
@@ -598,7 +624,7 @@ app .home-post-container {
     background-color: white;
     padding: 10px;
     border-radius: 5px;
-    height: 340px;
+    height: 240px;
 }
 
 .home-comment-desc:after {
@@ -612,7 +638,7 @@ app .home-post-container {
     z-index: 2;
     bottom: -20px;
     left: 70%;
-    top: 392px;
+    top: 291px;
 }
 
 #home-container {
@@ -664,14 +690,14 @@ app .home-post-container {
     margin-top: 10px;
     margin-bottom: 10px;
     width: 350px;
-    height: 300px;
+    height: 195px;
     border: 0.3em solid white;
 }
 
 .map-holder #map {
     display: block;
     width: 350px;
-    height: 290px;
+    height: 185px;
 }
 
 .map-holder>#map {

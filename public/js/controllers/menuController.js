@@ -103,7 +103,10 @@ class MenuController {
             .then(([template, data]) => {
                 const $container = $('#app-container');
                 // console.log('menu controller');
-                // console.log(data);
+                //console.log(data);
+
+                // Get first 3 items from menu
+                data = data.slice(0, 3);
 
                 $('#logo2').addClass('hide');
                 $('#home-btn').addClass('hide');
