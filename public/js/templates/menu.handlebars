@@ -1,67 +1,76 @@
 <div class="container">
-<div class="container-menu">
-    <div class="menu-container col-12 col-sm-6 col-md-3 pr-0 pl-0">
-        <h3 class="location-title">Chef's recommendations</h3>
-         {{#each this}}
-                <div class="menu-item">
-                    <div class="menu-list" data-id="{{key}}">
-                        <div class="menu-img2">
-                            <img src="{{img}}" class="img-responsive center-block img-list" alt="">
+    <div class="container-menu">
+        <div class="menu-container col-12 col-sm-6 col-md-3 pr-0 pl-0">
+            <h3 class="location-title">Chef's recommendations</h3>
+            {{#each this}}
+            <div class="menu-item">
+                <div class="menu-list" data-id="{{key}}">
+                    <div class="menu-img2">
+                        <img src="{{img}}" class="img-responsive center-block img-list img-fluid" alt="">
+                        <span class="price-tag">
+                            <span class="price-tag2">{{Price}}€</span>
+                        </span>
+                    </div>
+                    <div class="menu-desc">
+                        <div>
+                            <span><a href="#/menu/{{key}}" class="menu-profile">{{Title}}</a></span>
                         </div>
-                        <div class="menu-desc">
-                            <div>
-                                <span><a href="#/menu/{{key}}" class="menu-profile">{{Title}}</a></span>
-                            </div>
-                            <div class="menu-desc-hidden">
-                                <p>{{Description}}</p>
-                            </div>
+                        <div class="menu-desc-hidden">
+                            <p>{{Description}}</p>
                         </div>
                     </div>
                 </div>
-         {{/each}}
-    </div>
+            </div>
+            {{/each}}
+        </div>
 
-    <div class="menu-container col-12 col-sm-6 col-md-3 pr-0 pl-0">
-        <h3 class="location-title">Pizza Vegen</h3>
-         {{#each this}}
-                <div class="menu-item">
-                    <div class="menu-list" data-id="{{key}}">
-                        <div class="menu-img2">
-                            <img src="{{img}}" class="img-responsive center-block img-list" alt="">
+        <div class="menu-container col-12 col-sm-6 col-md-3 pr-0 pl-0">
+            <h3 class="location-title">Pizza Vegen</h3>
+            {{#each this}}
+            <div class="menu-item">
+                <div class="menu-list" data-id="{{key}}">
+                    <div class="menu-img2">
+                        <img src="{{img}}" class="img-responsive center-block img-list" alt="">
+                        <span class="price-tag">
+                            <span class="price-tag2">{{Price}}€</span>
+                        </span>
+                    </div>
+                    <div class="menu-desc">
+                        <div>
+                            <span><a href="#/menu/{{key}}" class="menu-profile">{{Title}}</a></span>
                         </div>
-                        <div class="menu-desc">
-                            <div>
-                                <span><a href="#/menu/{{key}}" class="menu-profile">{{Title}}</a></span>
-                            </div>
-                            <div class="menu-desc-hidden">
-                                <p>{{Description}}</p>
-                            </div>
+                        <div class="menu-desc-hidden">
+                            <p>{{Description}}</p>
                         </div>
                     </div>
                 </div>
-         {{/each}}
-    </div>
+            </div>
+            {{/each}}
+        </div>
 
-    <div class="menu-container col-12 col-sm-6 col-md-3 pr-0 pl-0">
-        <h3 class="location-title">Pizza Cheese</h3>
-         {{#each this}}
-                <div class="menu-item">
-                    <div class="menu-list" data-id="{{key}}">
-                        <div class="menu-img2">
-                            <img src="{{img}}" class="img-responsive center-block img-list" alt="">
+        <div class="menu-container col-12 col-sm-6 col-md-3 pr-0 pl-0">
+            <h3 class="location-title">Pizza Cheese</h3>
+            {{#each this}}
+            <div class="menu-item">
+                <div class="menu-list" data-id="{{key}}">
+                    <div class="menu-img2">
+                        <img src="{{img}}" class="img-responsive center-block img-list" alt="">
+                        <span class="price-tag">
+                            <span class="price-tag2">{{Price}}€</span>
+                        </span>
+                    </div>
+                    <div class="menu-desc">
+                        <div>
+                            <span><a href="#/menu/{{key}}" class="menu-profile">{{Title}}</a></span>
                         </div>
-                        <div class="menu-desc">
-                            <div>
-                                <span><a href="#/menu/{{key}}" class="menu-profile">{{Title}}</a></span>
-                            </div>
-                            <div class="menu-desc-hidden">
-                                <p>{{Description}}</p>
-                            </div>
+                        <div class="menu-desc-hidden">
+                            <p>{{Description}}</p>
                         </div>
                     </div>
                 </div>
-         {{/each}}
+            </div>
+            {{/each}}
+        </div>
     </div>
-</div>
 
 </div>

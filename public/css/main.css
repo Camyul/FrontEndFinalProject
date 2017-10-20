@@ -172,6 +172,13 @@ header {
     align-items: center;
 }
 
+.info-left h4 a {
+    color: #c8c5a1;
+    text-transform: uppercase;
+    font-family: "Georgia";
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+}
+
 .info-left h4 span {
     font-size: 10px;
 }
@@ -268,6 +275,7 @@ header {
 .menu-img2 {
     display: flex;
     width: 35%;
+    position: relative;
 }
 
 .menu-item {
@@ -349,6 +357,27 @@ header {
     border: 0.2em solid white;
 }
 
+.price-tag {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: -16px;
+    font-size: 1.33em;
+    height: 38px;
+    font-family: 'LeagueGothic', serif;
+    z-index: 100;
+}
+
+.price-tag2 {
+    display: block;
+    background: url('../assets/images/price.png') no-repeat top right;
+    padding: 2px 6px 10px 10px;
+    color: #fff;
+    font-style: normal;
+    z-index: 101;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.29);
+}
+
 .desc {
     font-family: LegueGothic;
     color: #7E4834;
@@ -412,7 +441,10 @@ footer {
 }
 
 footer div li a {
-    color: #847770;
+    font-family: "Georgia";
+    color: #402d1e;
+    line-height: 1.5;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
     text-transform: uppercase;
 }
 
@@ -449,8 +481,11 @@ footer div li a {
 
 #footer-container li a:hover {
     text-decoration: none;
-    color: #a29d79;
-    font-style: oblique;
+    font-family: "Georgia";
+    color: rgb(162, 157, 121);
+    font-style: italic;
+    line-height: 1.5;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
 }
 
 .footer-div {
