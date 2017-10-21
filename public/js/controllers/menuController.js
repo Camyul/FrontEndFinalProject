@@ -67,8 +67,8 @@ class MenuController {
                     if (user) {
                         //get values to send to Firebaseconsole.log(user.photoURL);
                         $('#comment').val('');
-                        if (commentarToSend.length < 50) {
-                            toastr.warning('Comment must be min 50 simbols');
+                        if (commentarToSend.length < 470) {
+                            toastr.warning('Comment must be min 470 simbols');
                             return false;
                         } else {
                             toastr.success('You are comment successful');
@@ -96,6 +96,21 @@ class MenuController {
                     return false;
                 })
             })
+            .then(() => Promise.all([this.templateLoader.get('before-comments'), this.dataService.getNComments(5)])
+                .then(([template, comments]) => {
+                    const $container3 = $('#reviews-post1');
+                    const $container4 = $('#reviews-post2');
+                    const $container5 = $('#reviews-post3');
+
+                    // Before footer - start
+                    $('#before-container').removeClass('hide');
+                    // Before footer - end
+
+                    const html = template(comments);
+                    $container3.html(html);
+                    $container4.html(html);
+                    $container5.html(html);
+                }))
     }
 
     getMenu() {
@@ -147,6 +162,24 @@ class MenuController {
 
                 const html = template(data);
                 $container.html(html);
+            })
+    }
+
+    getNComments() {
+        Promise.all([this.templateLoader.get('before-comments'), this.dataService.getNComments(5)])
+            .then(([template, comments]) => {
+                const $container3 = $('#reviews-post1');
+                const $container4 = $('#reviews-post2');
+                const $container5 = $('#reviews-post3');
+
+                // Before footer - start
+                $('#before-container').removeClass('hide');
+                // Before footer - end
+
+                const html = template(comments);
+                $container3.html(html);
+                $container4.html(html);
+                $container5.html(html);
             })
     }
 

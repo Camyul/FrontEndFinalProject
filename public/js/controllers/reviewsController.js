@@ -49,38 +49,37 @@ class ReviewsController {
                 const html = template();
                 $container.html(html);
             })
-    }
-    getComments() {
-        Promise.all([this.templateLoader.get('before-comments'), this.dataService.getNComments(5)])
-            .then(([template, comments]) => {
-                const $container = $('#before-col2');
-                const $container2 = $('#before-col3');
-                const $container3 = $('#reviews-post1');
-                const $container4 = $('#reviews-post2');
-                const $container5 = $('#reviews-post3');
+            .then(() => Promise.all([this.templateLoader.get('before-comments'), this.dataService.getNComments(5)])
+                .then(([template, comments]) => {
+                    const $container = $('#before-col2');
+                    const $container2 = $('#before-col3');
+                    const $container3 = $('#reviews-post1');
+                    const $container4 = $('#reviews-post2');
+                    const $container5 = $('#reviews-post3');
 
-                // Before footer - start
-                $('#before-container').removeClass('hide');
-                // Before footer - end
+                    // Before footer - start
+                    $('#before-container').removeClass('hide');
+                    // Before footer - end
 
-                const html = template(comments);
-                $container.html(html);
-                $container2.html(html);
-                $container3.html(html);
-                $container4.html(html);
-                $container5.html(html);
-            })
-            .then(() => {
-                const $h3 = $('<h3>');
-                $h3.addClass('location-title text-center');
-                $h3.text('Recent Posts');
-                const $h33 = $('<h3>');
-                $h33.addClass('location-title text-center');
-                $h33.text('Recent Comments');
+                    const html = template(comments);
+                    $container.html(html);
+                    $container2.html(html);
+                    $container3.html(html);
+                    $container4.html(html);
+                    $container5.html(html);
+                })
+                .then(() => {
+                    const $h3 = $('<h3>');
+                    $h3.addClass('location-title text-center');
+                    $h3.text('Recent Posts');
+                    const $h33 = $('<h3>');
+                    $h33.addClass('location-title text-center');
+                    $h33.text('Recent Comments');
 
-                $('#before-col2').prepend($h33);
-                $('#before-col3').prepend($h3);
-            })
+                    $('#before-col2').prepend($h33);
+                    $('#before-col3').prepend($h3);
+                })
+            )
     }
 }
 

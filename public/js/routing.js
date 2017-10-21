@@ -42,7 +42,6 @@ const router = (() => {
             .on('reviews', () => {
                 const reviewsController = new ReviewsController(dataService, templateLoader);
                 reviewsController.getReviews();
-                reviewsController.getComments();
             })
             .on('login', () => {
                 loginController
