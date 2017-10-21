@@ -18,61 +18,80 @@ Ribeye short loin pastrami, leberkas shank t-bone short ribs pork pork chop stri
 
                     </div>
                     <div class="comments">
-                        <div class="single-comment">
-
-                        </div>
-                        <div class="comment-form form-container">
-                            <h2 class="text-uppercase mt-5">Leave a comment</h2>
-                            <form class="form hidden is-auth" name="form" action="#/comments" method="POST">
-                                <label for="comment-text" class="sr-only">Comment</label>
-                                <textarea placeholder="Comment" id="comment-text" name="commentText" class="w-100" rows="4" required></textarea>
-                                <div class="text-right">
-                                    <button type="submit" class="btn">Submit comment</button>
+                        <h2 class="text-uppercase mb-4">2 Comments</h2>
+                        <div class="row">
+                            <div class="col-12 col-sm-3 col-md-2 pr-0 pl-0">
+                                <div class="avatar">
+                                    <img src="../../assets/images/avatar.png" alt="avatar" class="img-thumbnail">
+                                    <div class="comment-date font-italic">10-21-2017</div>
                                 </div>
-                            </form>
-                            <div class="not-auth">
-                                Only registered users may leave a comment, please
-                                <a href="#/login" class="font-italic" title="login">login</a> or
-                                <a href="#/login" class="font-italic" title="login">register</a>
+                            </div>
+                            <div class="col-12 col-sm-9 col-md-10 pl-0 pr-0">
+                                <div class="review-shadow">
+                                    <div class="comment-content reviews-comment-bubble">
+                                        <div class="reviews-author">Peter Milov says:</div>
+                                        <div class="reviews-comment-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                                            it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                                        <div class="text-right">
+                                            <button class="btn btn-success search-right reviews-btn">Search</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="reviews-lifted-corner-comment">
+                            <img src="./assets/images/lifted.png" alt="lifted-effect">
+                        </div>
+                        
+
+                    <div class="comment-form form-container">
+                        <h2 class="text-uppercase mt-5">Leave a comment</h2>
+                        <form class="form" name="form" action="#" method="POST">
+                            <label for="comment-text" class="sr-only">Comment</label>
+                            <textarea placeholder="Comment" id="comment-text" name="commentText" class="w-100" rows="4" required></textarea>
+                            <div class="text-right">
+                                <button type="submit" class="btn">Submit comment</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <aside class="col-12 col-sm-4 col-md-4 aside-content">
+                <div class="pb-4 list-posts">
+                    <h5 class="reviews-post-h5 location-title text-uppercase">Recent Posts</h5>
+                    <div class="reviews-comment-container">
+                        <div class="reviews-comment-desc">
+                            <div id="reviews-post1" class="home-post-container">
                             </div>
                         </div>
                     </div>
-                </div>
-                <aside class="col-12 col-sm-4 col-md-4 aside-content">
-                    <div class="pb-4 list-posts">
-                        <h5 class="reviews-post-h5 location-title text-uppercase">Recent Posts</h5>
-                        <div class="reviews-comment-container">
-                            <div class="reviews-comment-desc">
-                                <div id="reviews-post1" class="home-post-container">
-                                </div>
-                            </div>
-                        </div>
-                        <div id="reviews-lifted-corner">
-                            <img src="./assets/images/lifted.png" alt="lifted-effect">
-                        </div>
+                    <div id="reviews-lifted-corner">
+                        <img src="./assets/images/lifted.png" alt="lifted-effect">
+                    </div>
 
-                        <h5 class="reviews-post-h5 location-title text-uppercase">Recent Posts</h5>
-                        <div class="reviews-comment-container">
-                            <div class="reviews-comment-desc">
-                                <div id="reviews-post2" class="home-post-container">
-                                </div>
+                    <h5 class="reviews-post-h5 location-title text-uppercase">Recent Posts</h5>
+                    <div class="reviews-comment-container">
+                        <div class="reviews-comment-desc">
+                            <div id="reviews-post2" class="home-post-container">
                             </div>
                         </div>
-                        <div id="reviews-lifted-corner2">
-                            <img src="./assets/images/lifted.png" alt="lifted-effect">
-                        </div>
+                    </div>
+                    <div id="reviews-lifted-corner2">
+                        <img src="./assets/images/lifted.png" alt="lifted-effect">
+                    </div>
 
-                        <h5 class="reviews-post-h5 location-title text-uppercase">Recent Posts</h5>
-                        <div class="reviews-comment-container">
-                            <div class="reviews-comment-desc">
-                                <div id="reviews-post3" class="home-post-container">
-                                </div>
+                    <h5 class="reviews-post-h5 location-title text-uppercase">Recent Posts</h5>
+                    <div class="reviews-comment-container">
+                        <div class="reviews-comment-desc">
+                            <div id="reviews-post3" class="home-post-container">
                             </div>
                         </div>
-                        <div id="reviews-lifted-corner3">
-                            <img src="./assets/images/lifted.png" alt="lifted-effect">
-                        </div>
-                </aside>
+                    </div>
+                    <div id="reviews-lifted-corner3">
+                        <img src="./assets/images/lifted.png" alt="lifted-effect">
+                    </div>
+            </aside>
             </div>
         </div>
     </section>

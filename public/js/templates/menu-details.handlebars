@@ -22,5 +22,18 @@
                 <input id="saveForm" class="btn btn-success" name="saveForm" type="submit" value="New Comment"></input>
             </div>
         </form>
+        <div class="comments-container">
+        {{#each comments}}
+        <div class="comment-container">
+            <div>
+            <img src="{{authorPhoto}}" class="comment-img" alt="">
+            <div>{{CreatedOn}}</div>
+            </div>
+            <div class="comment-desc">
+                <p>{{authorName}} says:</p>
+                {{description}}
+            </div>
+        </div>
+        {{/each}}
     </div>
 </div>

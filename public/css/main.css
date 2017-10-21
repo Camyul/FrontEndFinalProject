@@ -1,838 +1,914 @@
-@font-face {
-    font-family: LegueGothic;
-    src: url('../assets/fonts/LeagueGothic-Regular.otf');
-}
-
-@font-face {
-    font-family: 'GoudyBookletter1911';
-    src: url("../assets/fonts/GoudyBookletter1911.otf");
-}
-
-@font-face {
-    font-family: 'Helvetica-Bold';
-    src: url("../assets/fonts/Helvetica-Bold.otf");
-}
-
-header {
-    display: block;
-    padding-top: 30px;
-    padding-bottom: 20px;
-    width: 100%;
-    background-image: -ms-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
-    background-image: -moz-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
-    background-image: -o-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
-    background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 359, color-stop(0, #7E4834), color-stop(100, #471414));
-    background-image: -webkit-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
-    background-image: radial-gradient(ellipse farthest-corner at center bottom, #7E4834 0%, #471414 100%);
-}
-
-.container {
-    margin-left: 0px;
-}
-
-#slogan {
-    font-size: 1.55em;
-    font-family: 'GoudyBookletter1911', serif;
-    color: #5f4f32;
-}
-
-#slogan:before {
-    content: "\201C";
-}
-
-#slogan:after {
-    content: "\201D";
-}
-
-#slogan2 {
-    font-size: 0.9em;
-    font-family: 'GoudyBookletter1911', serif;
-    text-transform: uppercase;
-    color: #aea38d;
-}
-
-.contact-flex {
-    display: flex;
-    flex-direction: column;
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-.contact-subsc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-}
-
-.comments-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.comment-container {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-}
-
-.comment-img {
-    margin-right: 25px;
-    display: flex;
-    width: 80px;
-    height: 80px;
-    box-shadow: 0 0.1em 0.1em #888888;
-    border: 0.4em solid white;
-}
-
-.comment-desc {
-    display: flex;
-    flex-direction: column;
-    height: 160px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0.5em 0.5em #888888;
-    border: 1px solid gray;
-}
-
-.comment-desc p {
-    font-family: LegueGothic;
-    font-size: 25px;
-    color: #442917;
-}
-
-.header-info-container {
-    margin-left: 10%;
-}
-
-.header-info {
-    width: 40%;
-    background-color: transparent;
-}
-
-.header-info h1 {
-    font-family: 'LegueGothic', serif;
-    font-size: 4em;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    color: white;
-}
-
-.header-info h5 {
-    font-family: 'Helvetica-Bold', sans-serif;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.91);
-    line-height: 16px;
-    margin-bottom: 1em;
-    color: rgb(255, 255, 255);
-}
-
-#after-header {
-    background-color: #faf9f5;
-    padding-left: 10%;
-    box-shadow: 1px 1px gray;
-}
-
-#after-header span {
-    display: flex;
-    justify-content: center;
-}
-
-#after-header a {
-    color: #847770;
-    text-transform: uppercase;
-}
-
-#after-header a:hover {
-    text-decoration: none;
-    font-style: oblique;
-}
-
-.after-header {
-    display: flex;
-}
-
-.info-right {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 15px;
-    width: 40%;
-}
-
-.info-left {
-    width: 60%;
-    color: #847770;
-    text-transform: uppercase;
-}
-
-.info-left h4 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.info-left h4 a {
-    color: #c8c5a1;
-    text-transform: uppercase;
-    font-family: "Georgia";
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-}
-
-.info-left h4 span {
-    font-size: 10px;
-}
-
-.search-right {
-    border-radius: 30px !important;
-}
-
-.search-right::-webkit-input-placeholder {
-    font-style: italic;
-}
-
-.search-right::-moz-placeholder {
-    font-style: italic;
-}
-
-#app-container {
-    padding-left: 10%;
-    background-color: #efedd4;
-    overflow: hidden;
-}
-
-.container-menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-bottom: 100px;
-}
-
-#location-container {
-    display: flex;
-    flex-direction: row;
-    padding-top: 40px;
-    padding-right: 25px;
-}
-
-.location-title {
-    font-size: 21px;
-    font-family: LegueGothic, sans-serif;
-    font-weight: bold;
-    color: #cac6a1;
-    text-transform: uppercase;
-}
-
-#menu-profile {
-    font-family: LegueGothic;
-    color: #442917;
-}
-
-.menu-profile {
-    font-family: LegueGothic;
-    color: #442917;
-}
-
-.menu-list {
-    display: flex;
-    background-color: transparent;
-    padding-right: 0.7em;
-    margin-bottom: 20px;
-}
-
-.menu-desc {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 10px;
-    color: #999785;
-    width: 75%;
-}
-
-.menu-desc span {
-    margin-top: 0px;
-    padding-bottom: 20px;
-    font-weight: normal;
-    font-size: 1.83em;
-    color: #402d1e;
-    text-transform: capitalize;
-}
-
-.menu-desc-hidden {
-    overflow: hidden;
-    font-size: 0.8em;
-    font-family: "Georgia";
-    color: rgb(146, 144, 124);
-    font-style: italic;
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-}
-
-.menu-img {
-    display: flex;
-    width: 20%;
-}
-
-.menu-img2 {
-    display: flex;
-    width: 35%;
-    position: relative;
-}
-
-.menu-item {
-    display: flex;
-    justify-content: center;
-    height: 85px;
-}
-
-.menu-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-#img-list {
-    display: flex;
-    box-shadow: 0 0.5em 0.5em #888888;
-    border: 0.3em solid white;
-    justify-content: center;
-}
-
-.img-list {
-    display: flex;
-    box-shadow: 0 0.5em 0.5em #888888;
-    border: 0.3em solid white;
-    justify-content: center;
-}
-
-#img-list-home {
-    float: left;
-}
-
-#menu-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-.menu-detail {
-    display: flex;
-    font-size: 30px;
-    text-align: center;
-}
-
-.menu-detail-product {
-    margin-top: 5px;
-}
-
-#menu-details div {
-    width: 100%;
-    border-radius: 10px;
-    font-family: LegueGothic;
-    color: #442917;
-    text-transform: uppercase;
-    font-size: 50px;
-    box-shadow: 0 0.5em 0.5em #888888;
-    border: 0.2em solid white;
-}
-
-#menu-details h3 {
-    width: 100%;
-    border-radius: 10px;
-    font-family: LegueGothic;
-    color: #442917;
-    text-transform: uppercase;
-    font-size: 50px;
-    box-shadow: 0 0.5em 0.5em #888888;
-    border: 0.2em solid white;
-}
-
-#menu-details img {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 0.5em 0.5em #888888;
-    border: 0.2em solid white;
-}
-
-.price-tag {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: -16px;
-    font-size: 1.33em;
-    height: 38px;
-    font-family: 'LeagueGothic', serif;
-    z-index: 100;
-}
-
-.price-tag2 {
-    display: block;
-    background: url('../assets/images/price.png') no-repeat top right;
-    padding: 2px 6px 10px 10px;
-    color: #fff;
-    font-style: normal;
-    z-index: 101;
-    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.29);
-}
-
-.desc {
-    font-family: LegueGothic;
-    color: #7E4834;
-    font-size: 50px;
-    text-transform: uppercase;
-}
-
-#newComment {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    width: 100%;
-    border-radius: 10px;
-    font-family: LegueGothic;
-    color: #888888;
-    font-size: 50px;
-    box-shadow: 0 0.5em 0.5em #888888;
-    border: 0.2em solid white;
-}
-
-#menu-details h4 {
-    width: 100%;
-    border-radius: 10px;
-    font-family: LegueGothic;
-    color: #7E4834;
-    font-size: 50px;
-    box-shadow: 0 0.5em 0.5em #888888;
-    border: 0.2em solid white;
-}
-
-#saveForm {
-    display: flex;
-    border-radius: 30px !important;
-}
-
-div p span {
-    color: #716851;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 400px;
-}
-
-.content>div>p {
-    font-family: "Georgia";
-    color: rgb(68, 41, 23);
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-}
-
-#home-btn {
-    margin-top: -16px;
-    background-color: #a9a37f;
-}
-
-footer {
-    background-color: #f2f1e8;
-    padding-left: 10%;
-}
-
-footer div li a {
-    font-family: "Georgia";
-    color: #402d1e;
-    line-height: 1.5;
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-    text-transform: uppercase;
-}
-
-.footer-div p {
-    font-size: 0.9em;
-    font-style: italic;
-}
-
-.footer-div p a.link {
-    text-decoration: none;
-    color: #402d1e;
-}
-
-.footer-div p a.link:hover {
-    text-decoration: underline;
-}
-
-.footer-home p span {
-    color: #92907C;
-}
-
-#footer-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    line-height: 20px;
-    padding: 10px 15px;
-    list-style: none;
-}
-
-#footer-container li {
-    padding: 20px;
-}
-
-#footer-container li a:hover {
-    text-decoration: none;
-    font-family: "Georgia";
-    color: rgb(162, 157, 121);
-    font-style: italic;
-    line-height: 1.5;
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-}
-
-.footer-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-.footer-div img {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 35px;
-}
-
-#map {
-    display: flex;
-    width: 70%;
-    height: 400px;
-    background-color: grey;
-    margin-bottom: 60px;
-}
-
-.logo {
-    padding-top: 8px;
-}
-
-.navbar-default,
-.navbar-toggle {
-    border-color: transparent;
-    border: 1px solid gray;
-}
-
-.navbar-default {
-    border-color: rgb(147, 140, 123);
-}
-
-.navbar {
-    border-radius: 0px;
-    margin-left: 10%;
-    background-color: rgb(147, 140, 123);
-    z-index: 999;
-}
-
-.container .nav li {
-    background-color: rgb(147, 140, 123);
-    text-transform: uppercase;
-}
-
-.container .nav li a {
-    color: white;
-    text-transform: uppercase;
-    font-size: 0.95em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-.container .nav li a:hover {
-    color: rgb(210, 201, 165);
-    background-color: rgb(147, 140, 123);
-    font-family: "Georgia";
-    color: rgb(238, 228, 186);
-    font-style: italic;
-    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.57);
-}
-
-.lifted-corner {
-    position: absolute;
-    left: 0;
-    top: 50px;
-}
-
-.lifted-corner-comment {
-    position: absolute;
-    left: 17px;
-    top: 291px;
-}
-
-#before-footer {
-    background-color: #f2f1e8;
-    padding-left: 10%;
-}
-
-#before-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border-bottom: 1px solid gray;
-    font-family: "Georgia";
-    color: rgb(68, 41, 23);
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-}
-
-#before-col1 {
-    font-family: LegueGothic;
-    width: 37%;
-    margin-top: 20px;
-    padding-right: 60px;
-}
-
-#before-col1 p {
-    font-size: 0.9em;
-    margin-top: 10px;
-    font-style: italic;
-    font-family: "Georgia";
-    color: rgb(146, 144, 124);
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-}
-
-#before-col2 {
-    font-family: LegueGothic;
-}
-
-#before-col3 {
-    width: 34%;
-    font-family: LegueGothic;
-    padding-left: 30px;
-}
-
-
-/* Start Caroucel */
-
-#myCarousel {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.carousel-inner {
-    padding-bottom: 6px;
-    display: flex;
-    justify-content: center;
-}
-
-.home-page-btn {
-    font-size: 16px;
-    font-family: "Georgia";
-    color: rgb(255, 255, 255);
-    line-height: 1.125;
-    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.004);
-}
-
-.home-container {
-    padding-bottom: 40px;
-}
-
-app .home-post-container {
-    display: block;
-}
-
-.home-post-container span {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 0.9em;
-    font-style: italic;
-    color: #908f7c;
-    line-height: 20px;
-}
-
-.home-comment-desc p {
-    font-family: LegueGothic;
-    font-size: 25px;
-    color: #442917;
-}
-
-.home-comment-container {
-    background-color: white;
-    border-radius: 5px;
-}
-
-.home-comment-desc {
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    height: 240px;
-}
-
-.home-comment-desc:after {
-    content: ' ';
-    position: absolute;
-    border-style: solid;
-    border-width: 0 20px 20px;
-    display: block;
-    width: 0;
-    border-color: transparent #fff transparent transparent;
-    z-index: 2;
-    bottom: -20px;
-    left: 70%;
-    top: 291px;
-}
-
-#home-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-#home-item3 {
-    display: flex;
-}
-
-#carousel-item1 {
-    display: block;
-}
-
-#carousel-item2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-#carousel-item3 {
-    display: flex;
-    flex-direction: column;
-}
-
-#carousel-item1 p {
-    font-size: 0.9em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #908f7c;
-    margin-top: 0.4rem;
-}
-
-#carousel-item1 h4 {
-    font-family: LegueGothic;
-    color: #cac6a1;
-    font-size: 18px;
-    margin-top: -10px;
-}
-
-#carousel-item1 h4 span {
-    color: #7E4834;
-}
-
-.map-holder {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 350px;
-    height: 195px;
-    border: 0.3em solid white;
-}
-
-.map-holder #map {
-    display: block;
-    width: 350px;
-    height: 185px;
-}
-
-.map-holder>#map {
-    width: 100%;
-}
-
-.carousel-inner h3 {
-    font-family: LegueGothic;
-    color: #cac6a1;
-    font-size: 30px;
-    text-transform: uppercase;
-}
-
-.carousel-inner h4 {
-    font-family: LegueGothic;
-    color: #cac6a1;
-    font-size: 18px;
-}
-
-.carousel-inner h4 span {
-    color: #7E4834;
-}
-
-.carousel-control.left,
-.carousel-control.right {
-    background-image: none;
-}
-
-.reviews-post {
-    padding-top: 50px;
-}
-
-.post {
-    display: block;
-    font-size: 1.1em;
-    font-family: "Georgia";
-    color: rgb(68, 41, 23);
-    line-height: 1.4;
-    text-align: left;
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-}
-
-.post-img {
-    float: left;
-    width: 40%;
-    height: 250px;
-    margin-right: 20px;
-    margin-bottom: 13px;
-}
-
-.reviews-comment-container {
-    background-color: white;
-    border-radius: 5px;
-    margin-left: 50px;
-    overflow: hidden;
-    margin-bottom: 50px;
-}
-
-.reviews-comment-desc {
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    height: 240px;
-}
-
-.before-footer-comment p {
-    font-family: "LegueGothic";
-    font-size: 1.05em;
-    color: rgb(68, 41, 23);
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
-}
-
-#reviews-lifted-corner {
-    position: absolute;
-    left: 67px;
-    top: 271px;
-}
-
-#reviews-lifted-corner2 {
-    position: absolute;
-    left: 67px;
-    top: 595px;
-}
-
-#reviews-lifted-corner3 {
-    position: absolute;
-    left: 67px;
-    top: 917px;
-}
-
-.reviews-post-h5 {
-    margin-left: 50px;
-    margin-top: 0px;
-}
+        @font-face {
+            font-family: LegueGothic;
+            src: url('../assets/fonts/LeagueGothic-Regular.otf');
+        }
+        
+        @font-face {
+            font-family: 'GoudyBookletter1911';
+            src: url("../assets/fonts/GoudyBookletter1911.otf");
+        }
+        
+        @font-face {
+            font-family: 'Helvetica-Bold';
+            src: url("../assets/fonts/Helvetica-Bold.otf");
+        }
+        
+        header {
+            display: block;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            width: 100%;
+            background-image: -ms-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
+            background-image: -moz-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
+            background-image: -o-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
+            background-image: -webkit-gradient(radial, center bottom, 0, center bottom, 359, color-stop(0, #7E4834), color-stop(100, #471414));
+            background-image: -webkit-radial-gradient(center bottom, ellipse farthest-corner, #7E4834 0%, #471414 100%);
+            background-image: radial-gradient(ellipse farthest-corner at center bottom, #7E4834 0%, #471414 100%);
+        }
+        
+        .container {
+            margin-left: 0px;
+        }
+        
+        #slogan {
+            font-size: 1.55em;
+            font-family: 'GoudyBookletter1911', serif;
+            color: #5f4f32;
+        }
+        
+        #slogan:before {
+            content: "\201C";
+        }
+        
+        #slogan:after {
+            content: "\201D";
+        }
+        
+        #slogan2 {
+            font-size: 0.9em;
+            font-family: 'GoudyBookletter1911', serif;
+            text-transform: uppercase;
+            color: #aea38d;
+        }
+        
+        .contact-flex {
+            display: flex;
+            flex-direction: column;
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+        
+        .contact-subsc {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+        }
+        
+        .comments {
+            padding-top: 40px;
+        }
+        
+        .comments-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        
+        .comment-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+        }
+        
+        .comment-img {
+            margin-right: 25px;
+            display: flex;
+            width: 80px;
+            height: 80px;
+            box-shadow: 0 0.1em 0.1em #888888;
+            border: 0.4em solid white;
+        }
+        
+        .comment-date {
+            font-size: 0.89em;
+            margin-top: 3px;
+            font-style: italic;
+        }
+        
+        .comment-desc {
+            display: flex;
+            flex-direction: column;
+            height: 160px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0.5em 0.5em #888888;
+            border: 1px solid gray;
+        }
+        
+        .comment-desc p {
+            font-family: LegueGothic;
+            font-size: 25px;
+            color: #442917;
+        }
+        
+        .header-info-container {
+            margin-left: 10%;
+        }
+        
+        .header-info {
+            width: 40%;
+            background-color: transparent;
+        }
+        
+        .header-info h1 {
+            font-family: 'LegueGothic', serif;
+            font-size: 4em;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+            color: white;
+        }
+        
+        .header-info h5 {
+            font-family: 'Helvetica-Bold', sans-serif;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.91);
+            line-height: 16px;
+            margin-bottom: 1em;
+            color: rgb(255, 255, 255);
+        }
+        
+        #after-header {
+            background-color: #faf9f5;
+            padding-left: 10%;
+            box-shadow: 1px 1px gray;
+        }
+        
+        #after-header span {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #after-header a {
+            color: #847770;
+            text-transform: uppercase;
+        }
+        
+        #after-header a:hover {
+            text-decoration: none;
+            font-style: oblique;
+        }
+        
+        .after-header {
+            display: flex;
+        }
+        
+        .info-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-right: 15px;
+            width: 40%;
+        }
+        
+        .info-left {
+            width: 60%;
+            color: #847770;
+            text-transform: uppercase;
+        }
+        
+        .info-left h4 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .info-left h4 a {
+            color: #c8c5a1;
+            text-transform: uppercase;
+            font-family: "Georgia";
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        }
+        
+        .info-left h4 span {
+            font-size: 10px;
+        }
+        
+        .search-right {
+            border-radius: 30px !important;
+            font-family: "Georgia";
+            color: rgb(255, 255, 255);
+            line-height: 1.125;
+            text-align: left;
+            text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.004);
+        }
+        
+        .search-right::-webkit-input-placeholder {
+            font-style: italic;
+        }
+        
+        .search-right::-moz-placeholder {
+            font-style: italic;
+        }
+        
+        #app-container {
+            padding-left: 10%;
+            background-color: #efedd4;
+            overflow: hidden;
+        }
+        
+        .container-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 100px;
+        }
+        
+        #location-container {
+            display: flex;
+            flex-direction: row;
+            padding-top: 40px;
+            padding-right: 25px;
+        }
+        
+        .location-title {
+            font-size: 21px;
+            font-family: LegueGothic, sans-serif;
+            font-weight: bold;
+            color: #cac6a1;
+            text-transform: uppercase;
+        }
+        
+        #menu-profile {
+            font-family: LegueGothic;
+            color: #442917;
+        }
+        
+        .menu-profile {
+            font-family: LegueGothic;
+            color: #442917;
+        }
+        
+        .menu-list {
+            display: flex;
+            background-color: transparent;
+            padding-right: 0.7em;
+            margin-bottom: 20px;
+        }
+        
+        .menu-desc {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 10px;
+            color: #999785;
+            width: 75%;
+        }
+        
+        .menu-desc span {
+            margin-top: 0px;
+            padding-bottom: 20px;
+            font-weight: normal;
+            font-size: 1.83em;
+            color: #402d1e;
+            text-transform: capitalize;
+        }
+        
+        .menu-desc-hidden {
+            overflow: hidden;
+            font-size: 0.8em;
+            font-family: "Georgia";
+            color: rgb(146, 144, 124);
+            font-style: italic;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        }
+        
+        .menu-img {
+            display: flex;
+            width: 20%;
+        }
+        
+        .menu-img2 {
+            display: flex;
+            width: 35%;
+            position: relative;
+        }
+        
+        .menu-item {
+            display: flex;
+            justify-content: center;
+            height: 85px;
+        }
+        
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        #img-list {
+            display: flex;
+            box-shadow: 0 0.5em 0.5em #888888;
+            border: 0.3em solid white;
+            justify-content: center;
+        }
+        
+        .img-list {
+            display: flex;
+            box-shadow: 0 0.5em 0.5em #888888;
+            border: 0.3em solid white;
+            justify-content: center;
+        }
+        
+        #img-list-home {
+            float: left;
+        }
+        
+        #menu-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        
+        .menu-detail {
+            display: flex;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .menu-detail-product {
+            margin-top: 5px;
+        }
+        
+        #menu-details div {
+            width: 100%;
+            border-radius: 10px;
+            font-family: LegueGothic;
+            color: #442917;
+            text-transform: uppercase;
+            font-size: 50px;
+            box-shadow: 0 0.5em 0.5em #888888;
+            border: 0.2em solid white;
+        }
+        
+        #menu-details h3 {
+            width: 100%;
+            border-radius: 10px;
+            font-family: LegueGothic;
+            color: #442917;
+            text-transform: uppercase;
+            font-size: 50px;
+            box-shadow: 0 0.5em 0.5em #888888;
+            border: 0.2em solid white;
+        }
+        
+        #menu-details img {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0.5em 0.5em #888888;
+            border: 0.2em solid white;
+        }
+        
+        .price-tag {
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: -16px;
+            font-size: 1.33em;
+            height: 38px;
+            font-family: 'LeagueGothic', serif;
+            z-index: 100;
+        }
+        
+        .price-tag2 {
+            display: block;
+            background: url('../assets/images/price.png') no-repeat top right;
+            padding: 2px 6px 10px 10px;
+            color: #fff;
+            font-style: normal;
+            z-index: 101;
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.29);
+        }
+        
+        .desc {
+            font-family: LegueGothic;
+            color: #7E4834;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+        
+        #newComment {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            width: 100%;
+            border-radius: 10px;
+            font-family: LegueGothic;
+            color: #888888;
+            font-size: 50px;
+            box-shadow: 0 0.5em 0.5em #888888;
+            border: 0.2em solid white;
+        }
+        
+        #menu-details h4 {
+            width: 100%;
+            border-radius: 10px;
+            font-family: LegueGothic;
+            color: #7E4834;
+            font-size: 50px;
+            box-shadow: 0 0.5em 0.5em #888888;
+            border: 0.2em solid white;
+        }
+        
+        #saveForm {
+            display: flex;
+            border-radius: 30px !important;
+        }
+        
+        div p span {
+            color: #716851;
+        }
+        
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            height: 400px;
+        }
+        
+        .content>div>p {
+            font-family: "Georgia";
+            color: rgb(68, 41, 23);
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        }
+        
+        #home-btn {
+            margin-top: -16px;
+            background-color: #a9a37f;
+        }
+        
+        footer {
+            background-color: #f2f1e8;
+            padding-left: 10%;
+        }
+        
+        footer div li a {
+            font-family: "Georgia";
+            color: #402d1e;
+            line-height: 1.5;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+            text-transform: uppercase;
+        }
+        
+        .footer-div p {
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        
+        .footer-div p a.link {
+            text-decoration: none;
+            color: #402d1e;
+        }
+        
+        .footer-div p a.link:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-home p span {
+            color: #92907C;
+        }
+        
+        #footer-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            line-height: 20px;
+            padding: 10px 15px;
+            list-style: none;
+        }
+        
+        #footer-container li {
+            padding: 20px;
+        }
+        
+        #footer-container li a:hover {
+            text-decoration: none;
+            font-family: "Georgia";
+            color: rgb(162, 157, 121);
+            font-style: italic;
+            line-height: 1.5;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        }
+        
+        .footer-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: 15%;
+            margin-right: 15%;
+        }
+        
+        .footer-div img {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 35px;
+        }
+        
+        #map {
+            display: flex;
+            width: 70%;
+            height: 400px;
+            background-color: grey;
+            margin-bottom: 60px;
+        }
+        
+        .logo {
+            padding-top: 8px;
+        }
+        
+        .navbar-default,
+        .navbar-toggle {
+            border-color: transparent;
+            border: 1px solid gray;
+        }
+        
+        .navbar-default {
+            border-color: rgb(147, 140, 123);
+        }
+        
+        .navbar {
+            border-radius: 0px;
+            margin-left: 10%;
+            background-color: rgb(147, 140, 123);
+            z-index: 999;
+        }
+        
+        .container .nav li {
+            background-color: rgb(147, 140, 123);
+            text-transform: uppercase;
+        }
+        
+        .container .nav li a {
+            color: white;
+            text-transform: uppercase;
+            font-size: 0.95em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+        
+        .container .nav li a:hover {
+            color: rgb(210, 201, 165);
+            background-color: rgb(147, 140, 123);
+            font-family: "Georgia";
+            color: rgb(238, 228, 186);
+            font-style: italic;
+            text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.57);
+        }
+        
+        .lifted-corner {
+            position: absolute;
+            left: 0;
+            top: 50px;
+        }
+        
+        .lifted-corner-comment {
+            position: absolute;
+            left: 17px;
+            top: 291px;
+        }
+        
+        #before-footer {
+            background-color: #f2f1e8;
+            padding-left: 10%;
+        }
+        
+        #before-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid gray;
+            font-family: "Georgia";
+            color: rgb(68, 41, 23);
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        }
+        
+        #before-col1 {
+            font-family: LegueGothic;
+            width: 37%;
+            margin-top: 20px;
+            padding-right: 60px;
+        }
+        
+        #before-col1 p {
+            font-size: 0.9em;
+            margin-top: 10px;
+            font-style: italic;
+            font-family: "Georgia";
+            color: rgb(146, 144, 124);
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        }
+        
+        #before-col2 {
+            font-family: LegueGothic;
+        }
+        
+        #before-col3 {
+            width: 34%;
+            font-family: LegueGothic;
+            padding-left: 30px;
+        }
+        /* Start Caroucel */
+        
+        #myCarousel {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .carousel-inner {
+            padding-bottom: 6px;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .home-page-btn {
+            font-size: 16px;
+            font-family: "Georgia";
+            color: rgb(255, 255, 255);
+            line-height: 1.125;
+            text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.004);
+        }
+        
+        .home-container {
+            padding-bottom: 40px;
+        }
+        
+        app .home-post-container {
+            display: block;
+        }
+        
+        .home-post-container span {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 0.9em;
+            font-style: italic;
+            color: #908f7c;
+            line-height: 20px;
+        }
+        
+        .home-comment-desc p {
+            font-family: LegueGothic;
+            font-size: 25px;
+            color: #442917;
+        }
+        
+        .home-comment-container {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .home-comment-desc {
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            height: 240px;
+        }
+        
+        .home-comment-desc:after {
+            content: ' ';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 20px 20px;
+            display: block;
+            width: 0;
+            border-color: transparent #fff transparent transparent;
+            z-index: 2;
+            bottom: -20px;
+            left: 70%;
+            top: 291px;
+        }
+        
+        #home-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        #home-item3 {
+            display: flex;
+        }
+        
+        #carousel-item1 {
+            display: block;
+        }
+        
+        #carousel-item2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        #carousel-item3 {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        #carousel-item1 p {
+            font-size: 0.9em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #908f7c;
+            margin-top: 0.4rem;
+        }
+        
+        #carousel-item1 h4 {
+            font-family: LegueGothic;
+            color: #cac6a1;
+            font-size: 18px;
+            margin-top: -10px;
+        }
+        
+        #carousel-item1 h4 span {
+            color: #7E4834;
+        }
+        
+        .map-holder {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 350px;
+            height: 195px;
+            border: 0.3em solid white;
+        }
+        
+        .map-holder #map {
+            display: block;
+            width: 350px;
+            height: 185px;
+        }
+        
+        .map-holder>#map {
+            width: 100%;
+        }
+        
+        .carousel-inner h3 {
+            font-family: LegueGothic;
+            color: #cac6a1;
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+        
+        .carousel-inner h4 {
+            font-family: LegueGothic;
+            color: #cac6a1;
+            font-size: 18px;
+        }
+        
+        .carousel-inner h4 span {
+            color: #7E4834;
+        }
+        
+        .carousel-control.left,
+        .carousel-control.right {
+            background-image: none;
+        }
+        
+        .reviews-post {
+            padding-top: 50px;
+        }
+        
+        .review-shadow {
+            position: relative;
+        }
+        
+        .post {
+            display: block;
+            font-size: 1.1em;
+            font-family: "Georgia";
+            color: rgb(68, 41, 23);
+            line-height: 1.4;
+            text-align: left;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        }
+        
+        .post-img {
+            float: left;
+            width: 40%;
+            height: 250px;
+            margin-right: 20px;
+            margin-bottom: 13px;
+        }
+        
+        .reviews-comment-container {
+            background-color: white;
+            border-radius: 5px;
+            margin-left: 50px;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+        
+        .reviews-comment-desc {
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            height: 240px;
+        }
+        
+        .before-footer-comment p {
+            font-family: "LegueGothic";
+            font-size: 1.05em;
+            color: rgb(68, 41, 23);
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        }
+        
+        #reviews-lifted-corner {
+            position: absolute;
+            left: 67px;
+            top: 271px;
+        }
+        
+        #reviews-lifted-corner2 {
+            position: absolute;
+            left: 67px;
+            top: 595px;
+        }
+        
+        #reviews-lifted-corner3 {
+            position: absolute;
+            left: 67px;
+            top: 917px;
+        }
+        
+        .reviews-post-h5 {
+            margin-left: 50px;
+            margin-top: 0px;
+        }
+        
+        .reviews-comment-bubble {
+            padding-top: 1.5em;
+            padding-right: 0.78em;
+            padding-bottom: 0px;
+            padding-left: 1.8em;
+            background: #FFFFFF;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 5;
+            margin-bottom: 2em;
+        }
+        
+        .reviews-comment-bubble:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #FFFFFF;
+            display: block;
+            width: 0;
+            z-index: 11;
+            left: -10px;
+            top: 20px;
+        }
+        
+        .reviews-author {
+            font-family: 'LegueGothic', serif;
+            font-size: 2em;
+            color: rgb(68, 41, 23);
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        }
+        
+        .reviews-comments-text {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1em;
+            color: #402d1e;
+            line-height: 1.9em;
+        }
+        
+        .reviews-btn {
+            margin-bottom: 15px;
+            margin-right: 15px;
+        }
+        
+        .reviews-lifted-corner-comment {
+            position: absolute;
+            left: 150px;
+            top: 975px;
+        }
+        
+        .reviews-lifted-corner-comment2 {
+            position: absolute;
+            left: 160px;
+            top: 1209px;
+        }
