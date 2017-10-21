@@ -767,5 +767,72 @@ app .home-post-container {
     background-image: none;
 }
 
+.reviews-post {
+    padding-top: 50px;
+}
 
-/* End Caroucel */
+.post {
+    display: block;
+    font-size: 1.1em;
+    font-family: "Georgia";
+    color: rgb(68, 41, 23);
+    line-height: 1.4;
+    text-align: left;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+}
+
+.post-img {
+    float: left;
+    width: 40%;
+    height: 250px;
+    margin-right: 20px;
+    margin-bottom: 13px;
+}
+
+.reviews-comment-container {
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 50px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.reviews-comment-desc {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    height: 240px;
+}
+
+.before-footer-comment p {
+    font-family: "LegueGothic";
+    font-size: 1.05em;
+    color: rgb(68, 41, 23);
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+}
+
+#reviews-lifted-corner {
+    position: absolute;
+    left: 67px;
+    top: 271px;
+}
+
+#reviews-lifted-corner2 {
+    position: absolute;
+    left: 67px;
+    top: 595px;
+}
+
+#reviews-lifted-corner3 {
+    position: absolute;
+    left: 67px;
+    top: 917px;
+}
+
+.reviews-post-h5 {
+    margin-left: 50px;
+    margin-top: 0px;
+}

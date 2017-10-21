@@ -6,6 +6,7 @@ import { ProfileController } from 'profileController';
 import { dataService } from 'dataService';
 import { loginController } from 'loginController';
 import { logoutController } from 'logoutController';
+import { ReviewsController } from 'reviewsController';
 
 import { templateLoader } from 'template-loader';
 
@@ -28,18 +29,20 @@ const router = (() => {
                 const menuController = new MenuController(dataService, templateLoader);
                 menuController.getMenu();
                 menuController.getComments();
-                // console.log('menu router');
             })
             .on('contact', () => {
                 const contactController = new ContactController(dataService, templateLoader);
                 contactController.getContacts();
-                // console.log('contact router');
             })
             .on('location', () => {
                 const locationController = new LocationController(dataService, templateLoader);
                 locationController.getLocation();
                 locationController.getComments();
-                // console.log('location router');
+            })
+            .on('reviews', () => {
+                const reviewsController = new ReviewsController(dataService, templateLoader);
+                reviewsController.getReviews();
+                reviewsController.getComments();
             })
             .on('login', () => {
                 loginController
@@ -51,7 +54,6 @@ const router = (() => {
             .on('profile', () => {
                 const profileController = new ProfileController(dataService, templateLoader);
                 profileController.getProfile();
-                // console.log('profile router');
             })
             .on('/', () => {
                 document.location.href = '#/home';
